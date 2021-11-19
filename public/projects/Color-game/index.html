@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Game</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <audio src="Sounds/win.mp3" id="win"></audio>
+    <audio src="Sounds/lose.mp3" id="lose"></audio>
+    <audio src="Sounds/full-game-win.mp3" id="gameWin"></audio>
+
+    <section id="main">
+
+        <section class="content">
+
+            <h1>Color Game</h1>
+
+            <p id="showTxt"></p>
+
+            <div class="container">
+                <p class="colors" onclick="blue()">blue</p>
+                <p class="colors" onclick="white()">white</p>
+                <p class="colors" onclick="yellow()">yellow</p>
+                <br>
+                <p class="colors" onclick="green()">green</p>
+                <p class="colors" onclick="red()">red</p>
+                <p class="colors" onclick="pink()">pink</p>
+                <p class="colors" onclick="purple()">purple</p>
+            </div>
+
+            <div class="score">
+                <p>Your Score</p>
+                <div class="result">
+                    <p id="win">Win</p>
+                    <p id="loss">Loss</p>
+                    <br>
+                </div>
+                <div class="result_score">
+                    <p id="winScore">0</p>
+                    <p id="lossScore">0</p>
+                </div>
+                <p id="highestScore"></p>
+            </div>
+
+            <div class="notes">
+                <br>
+                <p id="howToPlay"></p>
+            </div>
+
+        </section>
+        <footer>Copyright &#169; || Made by Abhi Dadhaniya...</footer>
+
+    </section>
+
+    <script src="index.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190968825-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-190968825-1');
+    </script>
+
+</body>
+
+</html>

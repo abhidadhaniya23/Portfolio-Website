@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body,html{
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../font/HelveticaNeue.otf') format('opentype');;
+}
+:root{
+    --color1: rgba(255, 255, 255, 0.486);
+    --color2: #030408;
+    --color3: #181d339f;
+    --color4: rgb(10,33,53);
+    --color5: rgb(7, 22, 36);
+    --color6: rgba(173, 218, 255, 0.616);
+    --font1:'Pacifico', cursive;
+    --font2: 'Helvetica', sans-serif;
+    --font3: 'Lobster', cursive;
+    --font4: "Gowun Dodum", sans-serif;
+    --font5: 'Dancing Script', cursive;
+    --font6: 'Comfortaa', cursive;
+}
+
+.top-btn{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: 0.5s ease;
+    opacity: 0;
+    z-index: 100;
+}
+.top-btn a{
+    font-size: 22px;
+    color: whitesmoke;
+    border: none;
+    padding: 13px 17px;
+    border-radius: 3px;
+    background: var(--color4);
+}
+
+/* this is first section */
+
+nav{
+    position: sticky;
+    top: 0;
+    /* background: var(--color1); */
+    background: var(--color4);
+    backdrop-filter: blur(1.6px);
+    padding: 25px;
+    z-index: 10;
+    transition: .4s ease;
+}
+ul{
+    position: relative;
+    top: -7px;
+    float: right;
+    right: 0;
+    transition: all 0.2s ease-out;
+}
+ul li{
+    margin: 0 5px;
+    display: inline;
+    list-style-type: none;
+    cursor: pointer;
+}
+#logo{
+    position: relative;
+    top: -25px;
+    float: left;
+    text-decoration: none;
+    font-family: var(--font1);
+    color: whitesmoke;
+    font-size: 23px;
+    transition: .4s ease;
+}
+ul li a{
+    margin: 0 5px 0;
+    font-family: var(--font2);
+    text-decoration: none;
+    color: whitesmoke;
+}
+#menu{
+    position: relative;
+    top: -7px;
+}
+#closemenu,
+#showmenu{
+    font-size: 20px;
+    color: whitesmoke;
+    float: none;
+    display: none;
+    cursor: pointer;
+}
+#first{
+    height: 100vh;
+    background: url('../photos/11.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transition: background 1.5s ease;
+}
+#first .header{
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: var(--font3);
+    font-size: 1.6rem;
+    color: var(--color4);
+    letter-spacing: 0.7px;
+    z-index: 2;
+}
+#first .header p{
+    margin: 10px auto 0;
+    font-family: var(--font4);
+    font-size: 16px;
+    width: 440px;
+}
+#first .header input{
+    margin: 20px auto 0;
+}
+
+/* second section */
+
+#second{
+    background: whitesmoke;
+}
+#second .header{
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font3);
+    font-size: 1.6rem;
+    color: var(--color4);
+    letter-spacing: 0.7px;
+}
+#second .header h1{
+    text-decoration: underline;
+}
+#second .header p{
+    text-align: center;
+    margin: 10px auto 0;
+    font-family: var(--font4);
+    font-size: 16px;
+    width: 440px;
+}
+#second .photos{
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#second .photos img{
+    border-radius: 5px;
+    margin: 0 10px;
+    width: 250px;
+    transition: 0.4s ease;
+}
+#second .photos img:hover{
+    transform: scale(1.1);
+}
+#second .paragraphs{
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+#second .paragraphs .first,
+#second .paragraphs .second{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(58,58,58);
+    line-height: 24px;
+}
+#second .paragraphs p{
+    font-family: var(--font2);
+    margin: 5px 20px;
+    text-align: left;
+    width: 400px;
+}
+
+/* third section */
+
+#third{
+    background: linear-gradient(rgba(0, 0, 0, 0.479),rgba(0, 0, 0, 0.521)),url(bg.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    /* background-color: var(--color4); */
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font2);
+    letter-spacing: 0.4px;
+}
+#third h5{
+    color: whitesmoke;
+    letter-spacing: 0.8px;
+    margin: 10px auto;
+    font-size: 17px;
+}
+#third p{
+    color: rgba(245, 245, 245, 0.733);
+    text-align: center;
+    width: 400px;
+}
+#third img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+/* forth section */
+
+#forth{
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: whitesmoke;
+}
+#forth .header{
+    margin: 10px auto;
+    text-align: center;
+    font-family: var(--font3);
+    font-size: 1.6rem;
+    color: var(--color4);
+    letter-spacing: 0.7px;
+}
+#forth .header h1{
+    text-decoration: underline;
+}
+#forth .photo-desc{
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#forth .photo-desc .desc{
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 300px;
+    text-align: left;
+    z-index: 8;
+}
+#forth .photo-desc .second-desc input,
+#forth .photo-desc .desc input{
+    cursor: pointer;
+    margin: 10px 0 0;
+    padding: 10px;
+    border: none;
+    font-family: var(--font2);
+    border-radius: 3px;
+    background: var(--color4);
+    color: rgb(223 238 241);
+    font-size: 14px;
+}
+#forth .photo-desc .second-desc{
+    align-items: flex-end;
+    text-align: right;
+}
+#forth .photo-desc img{
+    padding: 0 60px;
+    margin: 0px -30px;
+    width: 250px;
+}
+#forth .photo-desc .desc .quote{
+    font-family: var(--font6);
+    font-size: 15px;
+}
+#forth .photo-desc .desc .title{
+    margin: 5px 0 10px;
+    font-size: 27px;
+    font-family: var(--font5);
+}
+#forth .photo-desc .desc .details{
+    font-family: var(--font2);
+    color: rgb(58, 58, 58);
+}
+#forth .photos{
+    margin: 70px auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#forth .photos img{
+    margin: 0 10px;
+    width: 240px;
+    border-radius: 5px;
+}
+#forth .photos img:hover{
+    transform: scale(1.1);
+}
+#forth #second-photo-desc{
+    flex-direction: row-reverse;
+}
+
+/* fifth section */
+
+#fifth{
+    padding: 50px 0;
+    display: flex;
+    background: #f2f2f2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#fifth h2{
+    margin: 5px 0 10px;
+    font-size: 27px;
+    font-family: var(--font3);
+    font-size: 35px;
+    text-decoration: underline;
+    color: var(--color4);
+    letter-spacing: 0.7px;
+}
+#fifth .quote{
+    font-family: var(--font6);
+    font-size: 15px;
+}
+#fifth .details{
+    font-family: var(--font2);
+    width: 400px;
+    text-align: center;
+    color: rgb(58, 58, 58);
+}
+#fifth .inputs{
+    margin: 40px auto 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#fifth input[type="text"]{
+    margin: 0 10px;
+    font-family: var(--font2);
+    letter-spacing: 0.3px;
+}
+#fifth input[type="button"]{
+    padding: 10px 20px;
+    border: none;
+    font-family: var(--font2);
+    border-radius: 3px;
+    background: var(--color4);
+    color: rgb(223 238 241);
+    cursor: pointer;
+    font-size: 17px;
+}
+#fifth .inputs #fullname{
+    width: 350px;
+}
+
+/* footer */
+
+#footer{
+    padding: 40px 0 0;
+    font-family: var(--font2);
+    background: var(--color5);
+    color: var(--color6);
+    /* height: 50vh; */
+}
+#footer .header{
+    color: #6fb2f1bd;
+    text-align: center;
+    margin: 10px auto 20px;
+    font-size: 26px;
+    font-family: var(--font3);
+    text-decoration: underline;
+}
+#footer .moredetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#footer .moredetails .restorent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#footer .addressmore{
+    padding: 0 40px;
+}
+#footer .addressmore p{
+    margin: 10px auto;
+}
+#footer .restorent p{
+    margin: 0px auto;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+    font-family: var(--font1);
+}
+#footer .restorent .social-media{
+    margin: 10px auto 0;
+}
+#footer .restorent a{
+    margin: 0 5px;
+    color: var(--color6);
+    font-size: 18px;
+}
+#footer footer{
+    margin: 20px auto 0;
+    padding: 20px 0;
+    background: var(--color3);
+    text-align: center;
+    letter-spacing: 0.4px;
+    font-weight: bold;
+}
+
+@media (max-width: 1025px){
+    #forth .photos img{
+        width: 20%;
+    }
+    #second .paragraphs p{
+        width: 90%;
+    }
+    #second .photos img{
+        width: 30%;
+    }
+    #forth .photo-desc img{
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 670px){
+    .top-btn{
+        bottom: 20px;
+        right: 20px;
+    }
+    .top-btn a{
+        padding: 9px 12px;
+    }
+    #first .header p{
+        font-size: 14px;
+        width: 90%;
+    }
+    ul{
+        width: 130px;
+        height: 100vh;
+        /* background: #0af; */
+        background: var(--color5);
+        position: absolute;
+        top: 0;
+        left: -130px;
+        right: 0;
+        z-index: 20;
+        display: block;
+    }
+    #closemenu{
+        margin: 20px 0 10px 10px;
+        display: block;
+    }
+    #showmenu{
+        color: whitesmoke;
+        float: right;
+        display: block;
+        position: relative;
+        top: -7px;
+    }
+    ul li{
+        padding: 10px 0;
+        display: block;
+        cursor: pointer;
+    }
+    nav ul li a{
+        color: whitesmoke;
+    }
+    .logo{
+        position: absolute;
+        display: block;
+        cursor: pointer;
+    }
+    #first .header{
+        font-size: 23px;
+    }
+    #first .header p{
+        font-size: 14px;
+    }
+    #second .photos img{
+        margin: 10px auto;
+        width: 60%;
+    }
+    #second .header p{
+        font-size: 16px;
+        width: 90%;
+    }
+    #second .photos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #second .paragraphs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #second .paragraphs p{
+        width: 90%;
+        text-align: center;
+    }
+    #third p{
+        width: 90%;
+    }
+    #forth{
+        padding: 0;
+    }
+    #forth .photo-desc{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #forth .photo-desc .desc{
+        align-items: center;
+        width: 90%;
+        text-align: center;
+    }
+    #forth .photo-desc img{
+        padding: 0 10px;
+        width: 70%;
+    }
+    #forth #second-photo-desc{
+        flex-direction: column;
+    }
+    #forth .photos{
+        margin: 20px auto 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    #forth .photos img{
+        margin: 10px auto;
+        width: 80%;
+    }
+    #fifth{
+        padding: 50px 0 30px;
+    }
+    #fifth .details{
+        width: 95%;
+    }
+    #fifth .inputs{
+        margin: 20px auto;
+        flex-direction: column;
+    }
+    #fifth input[type="text"]{
+        margin: 10px auto;
+    }
+    #fifth .inputs #fullname{
+        width: 80%;
+    }
+    #fifth .inputs{
+        width: 95%;
+    }
+    #footer{
+        padding: 20px 0 0;
+    }
+    #footer .moredetails{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+    <section id="userInputs" class="flex-column">
+        <div class="error-disclaimer" id="error-disclaimer">
+            <p>Please select <br>data and time !</p>
+        </div>
+        <div class="body-userInput flex-column">
+            <h1 id="title">Countdown Timer</h1>
+            <input id="event-name" type="text" placeholder="Event Name">
+            <label for="">Count from today...</label>
+            <input type="date" name="" id="date">
+            <label for="">Select time...</label>
+            <input type="time" name="" id="time">
+            <a id="startCountdownBtn" onclick="countDownTimer()">Start Countdown</a>
+        </div>
+    </section>
+
+    <section id="count-down-timer">
+        <div class="main-body flex-column">
+            <div class="heading-event">
+                <p id="event-heading">Event Starts in...</p>
+            </div>
+            <div class="container flex-responsive">
+                <div class="time-first flex-row">
+                    <div class="time-data" class="year">
+                        <p class="data-time" id="year">00</p>
+                        <p class="data-unit">Years</p>
+                    </div>
+                    <div class="time-data" class="month">
+                        <p class="data-time" id="month">00</p>
+                        <p class="data-unit">Months</p>
+                    </div>
+                    <div class="time-data" class="day">
+                        <p class="data-time" id="day">00</p>
+                        <p class="data-unit">Days</p>
+                    </div>
+                </div>
+                <div class="time-second flex-row">
+                    <div class="time-data" class="hours">
+                        <p class="data-time" id="hours">00</p>
+                        <p class="data-unit">Hours</p>
+                    </div>
+                    <div class="time-data" class="minutes">
+                        <p class="data-time" id="minutes">00</p>
+                        <p class="data-unit">Minutes</p>
+                    </div>
+                    <div class="time-data" class="seconds">
+                        <p class="data-time" id="seconds">00</p>
+                        <p class="data-unit">Seconds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="footer-section">
+        <h2>About Developer</h2>
+        <div class="flex-row-media-for-column">
+            <div class="bio flex-column">
+                <div class="img-name">
+                    <img src="../time-square/photos/pic.jpeg" alt="Abhi Dadhaniya">
+                    <p class="title-head">Abhi<br>Dadhaniya</p>
+                </div>
+                <div class="social flex-row">
+                    <a href="https://www.instagram.com/_abhi_dadhaniya_/" target="_blank"><i class="fa fa-instagram"
+                            aria-hidden="true"></i></a>
+                    <a href="https://mobile.twitter.com/abhidadhaniya3" target="_blank"><i class="fa fa-twitter"
+                            aria-hidden="true"></i></a>
+                    <a href="http://github.com/abhidadhaniya23" target="_blank"><i class="fa fa-github"
+                            aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="website-redirect flex-column">
+                <p class="contact-me title-head">Portfolio Website</p>
+                <a id="visit-my-site" href="https://www.web-developer-abhi.tk/" target="_blank">Visit Now</a>
+            </div>
+            <div class="development flex-column">
+                <p class="title-head">Tools & Projects</p>
+                <div class="webpage-links flex-column">
+                    <!-- <a href="">password generator</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="../Common-Js/projects.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190968825-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-190968825-1');
+    </script>
+</body>
+
+</html>

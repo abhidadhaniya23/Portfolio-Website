@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+/* -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none; */
+*{
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    /* font-family: sans-serif; */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+:root{
+    --color-red: rgb(232,29,68);
+    --color-black: #1f1f1f;
+    --color-light: gold;
+}
+.flex-row{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.flex-column-align-left{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-content: space-around;
+	flex-wrap: wrap;
+}
+.flex-row-space-between{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;	
+}
+.flex-row-space-around{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;	
+}
+.flex-row-space-evenly{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;	
+}
+.flex-column{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.flex-column-space-evenly{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.flex-no-wrap{
+	flex-wrap: nowrap;
+}
+input{
+    outline: none;
+}
+#first-section{
+    position: relative;
+    min-height: 150vh;
+    /* background-image: linear-gradient(180deg, #aef4c5 0, #9cedc1 16.67%, #87e4bc 33.33%, #6cd8b4 50%, #4dccad 66.67%, #24c3aa 83.33%, #00bba9 100%); */
+    background-image: radial-gradient(circle at 50% -20.71%, #ffffa1 0, #f5ffa0 6.25%, #e4ffa0 12.5%, #d2ffa1 18.75%, #bdffa3 25%, #a7fda6 31.25%, #8cfaaa 37.5%, #6cf7af 43.75%, #3cf2b5 50%, #00edbc 56.25%, #00e8c6 62.5%, #00e4d0 68.75%, #00dfdc 75%, #00dbe9 81.25%, #00d7f5 87.5%, #00d3ff 93.75%, #00d0ff 100%);
+    /* background: red; */
+}
+button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+.main-body{
+    border-radius: 10px;
+    min-height: 250px;
+    width: 300px;
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.463);
+    backdrop-filter: blur(10px);
+    transition: .5s all ease;
+    color: var(--color-black);
+    transform: translateY(-20vh);
+    box-shadow: rgb(0 0 0 / 25%) 0px 25px 50px -12px;
+}
+.main-body .random-password{
+    width: 100%;
+    transition: .5s all ease;
+}
+.main-body h1{
+    text-align: center;
+    font-size: 1.6em;
+    padding: .5rem 0 1rem;
+}
+.main-body .inputs{
+    margin: 10px auto;
+    width: 100%;
+}
+.main-body .generated-password{
+    position: relative;
+    margin: 10px auto 0;
+    width: 100%;
+}
+.main-body .generated-password #copyBtn{
+    position: absolute;
+    padding: 7px 5px;
+    transform: translateX(240%);
+    background: gold;
+    color: inherit;
+    border-radius: 4px;
+    /* transition: 0.4s ease; */
+    text-align: center;
+    z-index: 10;
+}
+.main-body #inputBox{
+    /* position: absolute; */
+    border-radius: 3px;
+    padding: 10px 20px;
+    border: none;
+    width: 80%;
+    background: #ffffffad;
+}
+.main-body #randomize{
+    padding: 7px 10px !important;
+    font-size: .8em !important;
+    width: fit-content !important;
+    margin-bottom: 10px !important;
+}
+.main-body #randomize,
+.main-body #generatedPasswordBtn{
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.422);
+    color: inherit;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: bolder;
+    transition: 0.2s all ease;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+.main-body #randomize:hover,
+.main-body #generatedPasswordBtn:hover{
+    background: rgba(255, 255, 255, 0.68);
+}
+.main-body #randomize:active,
+.main-body #generatedPasswordBtn:active{
+    transform: scale(0.89);
+}
+.checkboxs{
+    cursor: pointer;
+}
+.main-body .input-range{
+    position: relative;
+    margin: 20px 0 5px;
+    font-weight: bolder;
+}
+.main-body .input-range .inside-input-range{
+   margin: 10px auto 0; 
+}
+.main-body .input-range .inside-input-range span{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background: #ffffff7d;
+}
+
+:root{
+    --footer-bg-color: rgb(5, 16, 39);
+    --footer-text-color-hover: rgb(78, 104, 155);
+    --footer-text-color-dark: rgb(36, 63, 118);
+    --footer-text-light-color: rgba(221, 221, 221, 0.741);
+    --footer-website-btn-color: rgb(10,32,71);
+}
+svg{
+    margin: 0 0 -10px 0;
+    position: absolute;
+    bottom: 0;
+}
+.flex-row-media-for-column{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+#footer-section{
+    background: var(--footer-bg-color);
+    color: var(--footer-text-color-dark);
+    font-family: var(--text-fonts);
+    padding: 0 0 2rem;
+}
+#footer-section h2{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0 3rem;
+    font-size: 2.5em;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+}
+#footer-section .bio .img-name{
+    width: 250px;
+}
+#footer-section .title-head{
+    text-align: center;
+    color: var(--footer-text-light-color-dark);
+    font-size: 2em;
+    font-weight: bold;
+}
+#footer-section .bio .img-name .title-head::after{
+    content: '';
+    display: block;
+    margin: 5px auto 0;
+    height: 3px;
+    width: 50%;
+    background: var(--footer-text-color-dark);
+}
+#footer-section .bio .img-name img{
+    width: 100%;
+    border-radius: 50%;
+}
+#footer-section .bio .social{
+    font-size: 1.5em;
+    padding: 10px 0;
+}
+#footer-section .bio .social a{
+    padding: 0 5px;
+    color: var(--footer-text-color-dark);
+    transition: .3s ease;
+}
+#footer-section .bio .social a:hover{
+    color: var(--footer-text-color-hover);
+}
+#footer-section .development .webpage-links a{
+    margin: 4px 0;
+    text-decoration: none;
+    color: var(--footer-text-color-dark);
+    transition: .4s ease;
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+#footer-section .development .webpage-links a::after{
+    content: '';
+    display: block;
+    background: var(--footer-text-color-hover);
+    height: 2px;
+    margin: 0 auto;
+    width: 0%;
+    transition: .2s ease;
+}
+#footer-section .development .webpage-links a:hover::after{
+    width: 100%;
+}
+#footer-section .development .webpage-links a:hover{
+    color: var(--footer-text-color-hover);
+}
+#footer-section .bio .title-head{
+    margin: 15px 0 0 !important;
+}
+#footer-section .bio .title-head,
+#footer-section .development .title-head,
+#footer-section .website-redirect .contact-me{
+    margin: 10px 0;
+    color: var(--footer-text-color-hover);
+}
+#footer-section .website-redirect #visit-my-site{
+    border-radius: 3px;
+    padding: 10px 25px;
+    text-decoration: none;
+    background: var(--footer-website-btn-color);
+    color: var(--footer-text-light-color);
+    font-weight: bolder;
+}
+@media (max-width:850px){
+    .flex-row-media-for-column{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* flex-wrap: wrap; */
+    }
+}
+@media (max-width: 600px){   
+    #first-section{
+        position: relative;
+        min-height: 100vh;
+    }
+}
+
+@media (max-width:320px){
+    .main-body{
+        transform: translateY(-10vh);
+        width: 90%;
+    }
+}
+@media (max-width:420px){
+    .main-body{
+        transform: translateY(-5vh);
+    }
+    #footer-section{
+        padding: 3rem 0 2rem;
+    }
+    #footer-section .website-redirect{
+        margin: 30px auto;
+    }
+    #footer-section .development .webpage-links a::after{
+        display: none;
+    }
+    #footer-section h2{
+        font-size: 2.2em;
+        transform: translateY(0);
+    }
+}

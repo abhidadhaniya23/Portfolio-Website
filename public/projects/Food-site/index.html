@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Food Demo Site</title>
+        <link rel="shortcut icon" href="logo/logo1.png" type="image/x-icon" />
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="styles/utils.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    </head>
+
+    <body>
+        <div class="top-btn" id="topBtn">
+            <a href="#"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></a>
+        </div>
+
+        <nav>
+            <a href="#" id="logo"><img class="thelogo" src="logo/logo2.png" /></a>
+            <i id="showmenu" onclick="showmenu()" class="fa fa-bars menu" aria-hidden="true"></i>
+            <ul id="ul">
+                <a onclick="closemenu()"><i id="closemenu" class="fa fa-window-close" aria-hidden="true"></i></a>
+                <li class="link"><a data-easing="easeInOutQuart" id="home" href="#">Home</a></li>
+                <li class="link"><a data-easing="easeInOutQuart" id="services" href="#second">Services</a></li>
+                <li class="link"><a data-easing="easeInOutQuart" id="foods" href="#forth">Foods</a></li>
+                <li class="link"><a data-easing="easeInOutQuart" id="contact" href="#fifth">Contact us</a></li>
+                <li class="link"><a data-easing="easeInOutQuart" id="about" href="#footer">About us</a></li>
+            </ul>
+        </nav>
+        <section id="first" class="m-auto">
+            <div class="header">
+                <!-- <h5>Tasty And Comfort</h5> -->
+                <img class="mylogo" src="logo/logo1.png" data-aos="zoom-in-up" />
+                <h1 data-aos="zoom-in-up">Tasty And Healthy</h1>
+                <p data-aos="zoom-in-up">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, quidem neque quisquam debitis molestiae sint, tempore cum..</p>
+                <input data-aos="zoom-in-up" type="button" class="buttons" value="Read More" />
+            </div>
+        </section>
+
+        <section id="second">
+            <div class="header m-auto">
+                <h1 data-aos="fade-down">Our Speciality</h1>
+                <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, quidem neque quisquam debitis.</p>
+            </div>
+            <div class="photos">
+                <img data-aos="zoom-out" src="photos/photo1.jpg" />
+                <img data-aos="zoom-out" src="photos/photo2.jpg" />
+                <img data-aos="zoom-out" src="photos/photo3.jpg" />
+            </div>
+            <div class="paragraphs">
+                <div class="first" data-aos="fade-right">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum repellat ipsam quibusdam dolor, voluptatem voluptas veniam doloribus minima enim esse quasi perferendis at saepe nesciunt, dolore nemo beatae sit. Exercitationem!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum voluptas dolorem eos magnam dolor culpa.</p>
+                </div>
+                <div class="second" data-aos="fade-left">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quasi odit sapiente? Adipisci natus totam quia eaque magnam fugiat. Repellendus aut reiciendis labore in odio!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, maxime!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="third">
+            <img data-aos="zoom-out" src="photos/person.jpg" />
+            <h5 data-aos="fade-up">Asim Riazs</h5>
+            <p data-aos="fade-up">This is the best restaurant for you because there facility are very highlevel and most people liked this restaurant.</p>
+        </section>
+
+        <section id="forth">
+            <div class="header m-auto">
+                <h1 data-aos="fade-down">Foods</h1>
+            </div>
+            <div class="photo-desc">
+                <img data-aos="flip-up" src="photos/dish2.png" />
+                <div data-aos="fade-right" class="desc">
+                    <p class="quote">Tasty And Comfort</p>
+                    <h2 class="title">Losos & Vegetables</h2>
+                    <p class="details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut amet tenetur aperiam suscipit odit sequi iste, quas fuga itaque aspernatur, ad aut dolorum voluptate?</p>
+                    <input type="button" class="details-btn" value="Explore More" />
+                </div>
+            </div>
+            <div class="photo-desc" id="second-photo-desc">
+                <img data-aos="flip-up" src="photos/dish1.png" />
+                <div data-aos="fade-left" class="desc second-desc">
+                    <p class="quote">Tasty And Comfort</p>
+                    <h2 class="title">Chicken Tagliatelle</h2>
+                    <p class="details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut amet tenetur aperiam suscipit odit sequi iste, quas fuga itaque aspernatur, ad aut dolorum voluptate?</p>
+                    <input type="button" class="details-btn" value="Explore More" />
+                </div>
+            </div>
+            <div class="photo-desc">
+                <img data-aos="flip-up" src="photos/dish3.png" />
+                <div data-aos="fade-right" class="desc">
+                    <p class="quote">Tasty And Comfort</p>
+                    <h2 class="title">Sweet Melancholia</h2>
+                    <p class="details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut amet tenetur aperiam suscipit odit sequi iste, quas fuga itaque aspernatur, ad aut dolorum voluptate?</p>
+                    <input type="button" class="details-btn" value="Explore More" />
+                </div>
+            </div>
+            <div class="photos">
+                <img data-aos="zoom-in-up" src="photos/pic1.jpg" />
+                <img data-aos="zoom-in-up" src="photos/pic2.jpg" />
+                <img data-aos="zoom-in-up" src="photos/pic3.jpg" />
+                <img data-aos="zoom-in-up" src="photos/pic4.jpg" />
+            </div>
+        </section>
+
+        <section id="fifth">
+            <p data-aos="zoom-out" class="quote">Tasty And Comfort</p>
+            <h2 data-aos="zoom-out">Book A Table</h2>
+            <p data-aos="zoom-out" class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores laboriosam, voluptas nulla, consequuntur ex perferendis ut dolorem possimus totam nemo ipsam nobis quasi eligendi.</p>
+            <div data-aos="zoom-out" class="inputs">
+                <input type="text" class="input" id="fullname" placeholder="Full Name" />
+                <input type="text" class="input" placeholder="Food" />
+            </div>
+            <input data-aos="zoom-out" type="button" value="Book a table" />
+        </section>
+
+        <section id="footer">
+            <div class="header">
+                <h2>About Us</h2>
+            </div>
+            <div class="moredetails">
+                <div class="restorent">
+                    <img class="thelogo2" src="logo/logo3.png" />
+                    <div class="social-media">
+                        <a target="_blank" href="www.instagram.com"><i class="fa fa-instagram"></i></a>
+                        <a target="_blank" href="www.facebook.com"><i class="fa fa-facebook"></i></a>
+                        <a target="_blank" href="www.twitter.com"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="addressmore">
+                    <p class="address">Address : vacent park, street no. 12, Restaurant, Dubai</p>
+                    <p class="contact">Ph No. : 123456789</p>
+                </div>
+            </div>
+            <footer>Copyright &#169; 2020 || All Rights Reserved.</footer>
+        </section>
+
+        <script src="script/script.js"></script>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                // Global settings:
+                disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+                // startEvent: "", // name of the event dispatched on the document, that AOS should initialize on
+                initClassName: "aos-init", // class applied after initialization
+                animatedClassName: "aos-animate", // class applied on animation
+                useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+                disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+                debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+                throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+                // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+                offset: 100, // offset (in px) from the original trigger point
+                delay: 0, // values from 0 to 3000, with step 50ms
+                duration: 1100, // values from 0 to 3000, with step 50ms
+                easing: "ease", // default easing for AOS animations
+                once: false, // whether animation should happen only once - while scrolling down
+                mirror: false, // whether elements should animate out while scrolling past them
+                anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+            });
+        </script>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190968825-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "UA-190968825-1");
+        </script>
+    </body>
+</html>

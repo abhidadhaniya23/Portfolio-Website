@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Square News</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="photos/fav-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Raleway:wght@500&family=Source+Sans+Pro:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="news-topics" id="newsTopics">
+        <div class="news-topics-body" id="newsTopicsBody">
+            <p class="news-category-title">News Category</p>
+            <div class="buttons-topic flex-row-wrap">
+                <button value='Business' onclick="categoryOf(value)" class="topic-btn">#Business</button>
+                <button value='Entertainment' onclick="categoryOf(value)" class="topic-btn">#Entertainment</button>
+                <button value='General' onclick="categoryOf(value)" class="topic-btn">#General</button>
+                <!-- <br> -->
+                <button value='Health' onclick="categoryOf(value)" class="topic-btn">#Health</button>
+                <button value='Science' onclick="categoryOf(value)" class="topic-btn">#Science</button>
+                <button value='Sports' onclick="categoryOf(value)" class="topic-btn">#Sports</button>
+                <!-- <br> -->
+                <button value='Technology' onclick="categoryOf(value)" class="topic-btn">#Technology</button>
+                <!-- <button value='Headlines' onclick="showHeadlines()" class="topic-btn">#Top Headlines</button> -->
+            </div>
+        </div>
+    </div>
+
+    <section id="first-section">
+        <div class="container">
+            <h1>Time Square News</h1>
+            <!-- <p>All type of news and news channels are here...</p> -->
+            <p>Take a quick look on the most popular categories and news sources</p>
+            <div class="buttons">
+                <a id="newsCategory">News Category</a>
+                <a href="#News" id="newsSourcesBtn">News Sources</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="News">
+        <h1 class="titles">Select News Source</h1>
+        <div class="newsChannels flex-column">
+
+            <div class="select" id="select">
+                <select name="lct" id="slct">
+                    <option selected disabled>Select News Source</option>
+                    <option value="bbc-news">BBC News</option>
+                    <option value="cnn">CNN</option>
+                    <option value="fox-news">Fox News</option>
+                </select>
+            </div>
+            <div class="disclaimer" id="disclaimer">Now onetime scroll up and then scroll down and start reading news...
+            </div>
+        </div>
+
+        <div class="news-data flex-column" id="news-data">
+            <!-- <div class="news-card">
+                <div class="news-img">
+                    <img src="">
+                </div>
+                <div class="news-title"></div>
+                <div class="news-description"></div>
+                <div class="news-author"></div>
+                <a href="" target="_blank">Read More</a>
+            </div> -->
+        </div>
+
+        <div class="loading-animation loading-animation-off" id="loading-animation">
+            <div class="balls"></div>
+            <div class="balls"></div>
+            <div class="balls"></div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="var(--footer-bg-color)" fill-opacity="1"
+                d="M0,128L48,144C96,160,192,192,288,197.3C384,203,480,181,576,165.3C672,149,768,139,864,154.7C960,171,1056,213,1152,240C1248,267,1344,277,1392,282.7L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
+
+    </section>
+
+    <section id="footer-section">
+        <h2>About Developer</h2>
+        <div class="flex-row-media-for-column">
+            <div class="bio flex-column">
+                <div class="img-name">
+                    <img src="photos/pic.jpeg" alt="Abhi Dadhaniya">
+                    <p class="title-head">Abhi<br>Dadhaniya</p>
+                </div>
+                <div class="social flex-row">
+                    <a href="https://www.instagram.com/_abhi_dadhaniya_/" target="_blank"><i class="fa fa-instagram"
+                            aria-hidden="true"></i></a>
+                    <a href="https://mobile.twitter.com/abhidadhaniya3" target="_blank"><i class="fa fa-twitter"
+                            aria-hidden="true"></i></a>
+                    <a href="http://github.com/abhidadhaniya23" target="_blank"><i class="fa fa-github"
+                            aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="website-redirect flex-column">
+                <p class="contact-me title-head">Portfolio Website</p>
+                <a id="visit-my-site" href="https://www.web-developer-abhi.tk/" target="_blank">Visit Now</a>
+            </div>
+            <div class="development flex-column">
+                <p class="title-head">Tools & Projects</p>
+                <div class="webpage-links flex-column">
+                    <!-- <a href="">password generator</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script async src="script.js"></script>
+    <script async src="../Common-Js/projects.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190968825-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-190968825-1');
+    </script>
+</body>
+
+</html>

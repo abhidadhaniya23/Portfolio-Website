@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section id="first-section" class="flex-row">
+        <div class="main-body flex-row">
+            <h1>Password Generator</h1>
+            <div class="random-password flex-column-space-evenly">
+                <div class="generated-password flex-row">
+                    <input type="text" value="" id="inputBox" placeholder="Enter password">
+                    <button id="copyBtn">copy</button>
+                </div>
+                <div class="input-range flex-column">
+                    <label for="">length of password</label>
+                    <div class="inside-input-range flex-row">
+                        <span id="lengthOfPasswordTxt">4</span>
+                        <input type="range" id="numberOfPassword" min="4" max="20" value="4">
+                    </div>
+                </div>
+                <div class="inputs flex-column-align-left">
+                    <div>
+                        <input type="checkbox" class="checkboxs" id="numbers">
+                        <label for="">Numbers</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkboxs" id="alphabats">
+                        <label for="">Alphabats</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkboxs" id="capital">
+                        <label for="">Capital Latters</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="checkboxs" id="symbols">
+                        <label for="">Symbols</label>
+                    </div>
+                </div>
+                <button id="randomize">Randomize characters</button>
+                <button id="generatedPasswordBtn">Generate Password</button>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="var(--footer-bg-color)" fill-opacity="1"
+                d="M0,128L48,144C96,160,192,192,288,197.3C384,203,480,181,576,165.3C672,149,768,139,864,154.7C960,171,1056,213,1152,240C1248,267,1344,277,1392,282.7L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
+    </section>
+
+    <section id="footer-section">
+        <h2>About Developer</h2>
+        <div class="flex-row-media-for-column">
+            <div class="bio flex-column">
+                <div class="img-name">
+                    <img src="../time-square/photos/pic.jpeg" alt="Abhi Dadhaniya">
+                    <p class="title-head">Abhi<br>Dadhaniya</p>
+                </div>
+                <div class="social flex-row">
+                    <a href="https://www.instagram.com/_abhi_dadhaniya_/" target="_blank"><i class="fa fa-instagram"
+                            aria-hidden="true"></i></a>
+                    <a href="https://mobile.twitter.com/abhidadhaniya3" target="_blank"><i class="fa fa-twitter"
+                            aria-hidden="true"></i></a>
+                    <a href="http://github.com/abhidadhaniya23" target="_blank"><i class="fa fa-github"
+                            aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="website-redirect flex-column">
+                <p class="contact-me title-head">Portfolio Website</p>
+                <a id="visit-my-site" href="https://www.web-developer-abhi.tk/" target="_blank">Visit Now</a>
+            </div>
+            <div class="development flex-column">
+                <p class="title-head">Tools & Projects</p>
+                <div class="webpage-links flex-column">
+                    <!-- <a href="">password generator</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script src="../Common-Js/projects.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190968825-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-190968825-1');
+    </script>
+</body>
+
+</html>

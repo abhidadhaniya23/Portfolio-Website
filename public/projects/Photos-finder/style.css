@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Noto+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    background: rgb(109, 14, 199);
+    font-family: 'Noto Sans', sans-serif;
+}
+.content{
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.content h1{
+    color: whitesmoke;
+    letter-spacing: 1px;
+    font-family: 'Cinzel', serif;
+}
+input[type="text"]{
+    width: 350px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background: whitesmoke;
+    border: none;
+}
+input[type="button"]{
+    font-size: 15px;
+    background: blueviolet;
+    border: none;
+    color: whitesmoke;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 3px;
+}
+img{
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 40px -10px rgb(161, 74, 243);
+    z-index: 8;
+}
+.searchTools{
+    margin: 10px auto 0;
+    display: flex;
+    flex-direction: row;
+}
+.searchTools input{
+    margin: 0 5px;
+}
+
+/* loading animation */
+.loadingName{
+    position: absolute;
+    top: 110%;
+    left: -32px;
+    font-size: larger;
+    color: whitesmoke;
+}
+.loadingName p{
+    animation-name: text_effect;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+}
+@keyframes text_effect{
+    0%{
+        opacity: .2;
+    }
+    100%{
+        opacity: .7;
+    }
+}
+.loading_animation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+}
+.slides{
+    width: 5px;
+    height: 100px;
+    animation-duration: .7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+.loading_animation div:nth-child(1){
+    animation-name: first;
+    background: tomato;
+    transform: rotate(45deg);
+}
+.loading_animation div:nth-child(2){
+    animation-name: second;
+    background: springgreen;
+    transform: rotate(-45deg);
+}
+@keyframes first{
+    0%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes second{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+#note{
+    margin: 10px auto;
+    color: rgb(187, 115, 255);
+    font-size: 13px;
+}
+@media (max-width: 520px){
+    .searchTools input{
+        margin: 5px auto;
+    }
+    input[type="text"]{
+        width: 70%;
+    }
+    img{
+        width: 98%;
+    }
+}

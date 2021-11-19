@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="flex-column">
+
+    <div class="main-body flex-column">
+        <div class="header flex-row-jc-sb">
+            <h2 class="title">Rock <br> Paper <br> Scissor</h2>
+            <div class="score flex-column">
+                <h2>Score</h2> <br>
+                <p class="count">00</p>
+                <p class="try">Trial : 00</p>
+            </div>
+        </div>
+        <div class="game-choice flex-column">
+            <!-- <img class="back-triangle" src="./src/triangle.png"> -->
+            <div class="choice-photos">
+                <div class="choice1 flex-row">
+                    <img src="./src/paper.png" disable=true onclick="pickAnswer('paper')" alt="">
+                    <img src="./src/rock.png" disable=true onclick="pickAnswer('rock')" alt="">
+                </div>
+                <div class="choice2 flex-row">
+                    <img src="./src/scissor.png" disable=true onclick="pickAnswer('scissor')" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="game-result">
+            <div class="result flex-column">
+                <h2 class="final-result">You Won..!</h2>
+                <button onclick="playAgain()" class="play-again-btn">Play Again</button>
+            </div>
+            <div class="flex-row">
+                <div class="user-selected flex-column">
+                    <h2 class="picked">You Picked</h2>
+                    <img class="userAns" src="" alt="">
+                </div>
+                <div class="cp-selected flex-column">
+                    <h2 class="picked">AI</h2>
+                    <img class="cpAns" src="" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="footer-section">
+        <h2>About Developer</h2>
+        <div class="flex-row-media-for-column">
+            <div class="bio flex-column">
+                <div class="img-name">
+                    <img src="../time-square/photos/pic.jpeg" alt="Abhi Dadhaniya">
+                    <p class="title-head">Abhi<br>Dadhaniya</p>
+                </div>
+            </div>
+            <div class="website-redirect flex-column">
+                <p class="contact-me title-head">Portfolio Website</p>
+                <a id="visit-my-site" href="https://www.web-developer-abhi.tk/" target="_blank">Visit Now</a>
+                <div class="social flex-row">
+                    <a href="https://www.instagram.com/_abhi_dadhaniya_/" target="_blank"><i
+                            class="fa fa-instagram flex" aria-hidden="true"></i></a>
+                    <a href="https://mobile.twitter.com/abhidadhaniya3" target="_blank"><i class="fa fa-twitter flex"
+                            aria-hidden="true"></i></a>
+                    <a href="http://github.com/abhidadhaniya23" target="_blank"><i class="fa fa-github flex"
+                            aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="development flex-column">
+                <p class="title-head">Tools & Projects</p>
+                <div class="webpage-links flex-column">
+                    <!-- <a href="">password generator</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+    <script src="../Common-Js/projects.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-190968825-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-190968825-1');
+    </script>
+</body>
+
+</html>

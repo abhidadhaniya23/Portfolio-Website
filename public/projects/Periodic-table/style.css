@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Hind+Madurai:wght@300&family=Raleway&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Hind Madurai', sans-serif;
+    color: whitesmoke;
+}
+html{
+    background: #1f1f1f;
+}
+.header{
+    margin: 10px auto 20px;
+    text-align: center;
+}
+.header h1{
+    margin: 10px auto;
+    letter-spacing: 1px;
+    font-family: 'Archivo', sans-serif;
+    color: springgreen;
+}
+.notice{
+    color: springgreen;
+}
+.header p{
+    margin: 5px auto;
+    font-size: 15px;
+    width: 200px;
+    letter-spacing: 0.4px;
+    font-family: 'Raleway', sans-serif;
+}
+.allElements{
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+.element{
+    margin: 5px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid whitesmoke;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+.elementData{
+    margin: 3px auto;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid yellow;
+    border-radius: 3px;
+}
+.elementData .atomicNumber,
+.element .atomicNumber{
+    letter-spacing: 0.3px;
+    font-size: 13px;
+}
+.elementData .name,
+.element .name{
+    letter-spacing: 0.5px;
+    font-size: 13px;
+}
+.elementData .symbol,
+.element .symbol{
+    letter-spacing: 0.3px;
+    font-size: 30px;
+    margin: -5px auto;
+}
+.elementData .atomicWeight,
+.element .atomicWeight{
+    letter-spacing: 0.4px;
+    font-size: 12px;
+}
+.elementDetails{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #1f1f1f;
+    padding: 10px 30px 10px;
+    border-radius: 10px;
+    visibility: hidden;
+}
+.elementDetails.active{
+    visibility: visible;
+}
+.elementDetails p{
+    color: whitesmoke;
+}
+.elementDetails a{
+    color: rgb(0, 255, 234);
+}
+.elementDetails .elementData{
+    margin: 10px auto 10px;
+}
+.elementDetails p{
+    margin: 1px auto;
+}
+.closeData{
+    margin: 5px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: whitesmoke;
+    background: rgb(85, 0, 223);
+    border: none;
+}
+footer{
+    display: none;
+    padding: 10px;
+    text-align: center;
+    margin-top: 5px;
+    background:rgb(92, 12, 172);
+}
+
+/* loading animation */
+
+
+.loading-animation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+}
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven{
+    margin: 0 3px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: crimson;
+    animation-iteration-count: infinite;
+    animation-duration: .7s;
+    animation-direction: alternate;
+}
+.one{
+    animation-name: one;
+    animation-delay: 0.1s;
+}
+@keyframes one{
+    0%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(0.8);
+    }
+}
+.two{
+    animation-name: two;
+    animation-delay: 0.2s;
+}
+@keyframes two{
+    0%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(0.8);
+    }
+}
+.three{
+    animation-name: three;
+    animation-delay: 0.3s;
+}
+@keyframes three{
+    0%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(0.8);
+    }
+}
+.four{
+    animation-name: four;
+    animation-delay: 0.4s;
+}
+@keyframes four{
+    0%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(0.8);
+    }
+}
+.five{
+    animation-name: five;
+    animation-delay: 0.5s;
+}
+@keyframes five{
+    0%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(0.8);
+    }
+}
+.six{
+    animation-name: six;
+    animation-delay: 0.6s;
+}
+@keyframes six{
+    0%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(0.8);
+    }
+}
+.seven{
+    animation-name: seven;
+    animation-delay: 0.7s;
+}
+@keyframes seven{
+    0%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(0.8);
+    }
+}

@@ -1,0 +1,396 @@
+/* @import url(//db.onlinewebfonts.com/c/ed607ec54528455e6e97e3da1379d777?family=TriviaSansBook); */
+@font-face {
+    font-family: font;
+    src: url(./font/TriviaSansBook.woff);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: font;
+}
+img,button{
+    -webkit-tap-highlight-color: rgba(176, 159, 159, 0);
+}
+p{
+    font-family: font;
+    /* font-family: neue; */
+    color: white;
+}
+h2{
+    color: white;
+}
+input,a,button{
+    border: none;
+    outline: none;
+}
+.flex-row{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.flex-responsive{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flex-row-space-between{
+    display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;	
+}
+.flex-row-space-around{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;	
+}
+.flex-row-space-evenly{
+    display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;	
+}
+.flex-column{
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.flex-row-jc-sb{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flex-no-wrap{
+    flex-wrap: nowrap;
+}
+@media (max-width: 500px) {
+    .flex-responsive{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+.flex-row-media-for-column{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+@media (max-width:850px){
+    .flex-row-media-for-column{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* flex-wrap: wrap; */
+    }
+}
+
+
+:root{
+    --dark-blue: rgb(3, 14, 44);
+    --light-blue: rgb(16, 136, 255);
+    --light-black: rgba(0, 0, 0, 0.735);
+}
+
+
+body{
+    background: var(--dark-blue);
+    /* disable select any text */
+    -webkit-user-select:none;
+    -moz-user-select:-moz-none;
+    -ms-user-select:none;
+    user-select:none
+}
+.main-body{
+    width: 50%;
+    min-height: 100vh;
+}
+.header{
+    margin: 3rem auto;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    border: 2px solid rgba(245, 245, 245, 0.605);
+    border-radius: 1rem;
+    transition: 0.2s ease;
+}
+.header .title{
+    font-size: 2.1rem;
+}
+.header .score{
+    width: 5rem;
+    padding: 1rem;
+    background: whitesmoke;
+    border-radius: 1rem;
+}
+.header .score h2{
+    color: var(--light-blue);
+    letter-spacing: .1rem;
+}
+.header .score .count{
+    font-weight: bold;
+    margin-top: -1rem;
+    font-size: 4rem;
+    color: var(--light-black);
+}
+.header .score .try{
+    font-weight: bold;
+    /* letter-spacing: -.1px; */
+    font-weight: bold;
+    color: var(--light-black);
+}
+.game-choice{
+    margin: .1rem;
+    position: relative;
+    width: 100%;
+    /* display: none; */
+}
+img{
+    width: 10rem;
+}
+.game-choice .choice-photos img,img{
+    margin: 0 1rem;
+    z-index: 2;
+}
+.game-choice .choice-photos img{
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+.game-choice .choice-photos img:hover{
+    transform: scale(1.05);
+}
+.game-choice .back-triangle{
+    width: 15rem;
+    position: absolute;
+}
+.game-result{
+    padding: 1rem;
+    margin: 0.5rem 0;
+    display: none;
+}
+.game-result h2{
+    margin: 1.7rem 0;
+}
+.game-result .result{
+    margin: 0 1.3rem 2rem;
+}
+.game-result .result h2{
+    font-size: 2.4rem;
+}
+.game-result .result .play-again-btn{
+    cursor: pointer;
+    padding: .5rem 1rem;
+    font-size: 1.3rem;
+    background: gold;
+    border-radius: .15rem;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+.game-result .result .play-again-btn:hover{
+    transform: scale(0.93);
+}
+.game-result .result .final-result{
+    font-size: 4rem;
+}
+.game-result .user-selected,
+.game-result .cp-selected{
+    margin: 0 2rem;
+}
+img{
+    transition: 0.13s ease;
+}
+@media (max-width: 700px) {
+    .game-choice .choice-photos img:active,
+    img:active{
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 400px) {
+    *{
+        font-size: 13px;        
+    }
+    .main-body{
+        width: 90%;
+        min-height: 90vh;
+    }
+    .header{
+        margin: 3rem auto;
+        padding: 1rem 1.5rem;
+        width: 80%;
+    }
+    .header .score .count{
+        margin: -.5rem 0 -.1rem;
+        font-size: 3.4rem;
+    }
+    .game-result .result{
+        margin: 0rem auto 3.4rem;
+    }
+    .game-result .picked{
+        font-size: 1.5rem;
+    }
+    .game-result .result .final-result{
+        font-size: 3.5rem;
+    }
+    .game-result .result .play-again-btn{
+        padding: 1rem 1.3rem;
+        font-size: 1.66rem;
+        border-radius: .37rem;
+    }
+    .game-result .user-selected,
+    .game-result .cp-selected{
+        margin: 0;
+    }
+    .header .score h2{
+        font-size: 1.3rem;
+    }
+}
+
+
+
+
+
+/* Footer */
+
+:root{
+    --footer-bg-color: rgb(5, 16, 39);
+    --footer-text-color-hover: rgb(78, 104, 155);
+    --footer-text-color-dark: rgb(36, 63, 118);
+    --footer-text-light-color: rgba(221, 221, 221, 0.741);
+    --footer-website-btn-color: rgb(10,32,71);
+}
+
+
+#footer-section{
+    margin-top: 3rem;
+    width: 100%;
+    background: var(--footer-bg-color);
+    color: var(--footer-text-color-dark);
+    font-family: var(--text-fonts);
+    padding: 5rem 0 2rem;
+}
+#footer-section h2{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0 3rem;
+    font-size: 2.5em;
+    /* font-family: 'Raleway', sans-serif; */
+    letter-spacing: 1px;
+}
+#footer-section .bio .img-name{
+    width: 250px;
+}
+#footer-section .title-head{
+    text-align: center;
+    color: var(--footer-text-light-color-dark);
+    font-size: 2em;
+    font-weight: bold;
+}
+#footer-section .bio .img-name .title-head::after{
+    content: '';
+    display: block;
+    margin: 5px auto 0;
+    height: 3px;
+    width: 50%;
+    background: var(--footer-text-color-dark);
+}
+#footer-section .bio .img-name img{
+    width: 100%;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+#footer-section .social{
+    margin: 1rem auto 0;
+    font-size: 1.5em;
+    padding: 10px 0;
+}
+#footer-section .social a{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background: var(--footer-text-color-dark);
+    border-radius: 50px;
+    color: whitesmoke;
+    transition: .3s ease;
+}
+#footer-section .social a:hover{
+    transform: translateY(-5px);
+}
+#footer-section .development .webpage-links a{
+    margin: 4px 0;
+    text-decoration: none;
+    color: var(--footer-text-color-dark);
+    transition: .4s ease;
+    font-size: 1.2em;
+    font-weight: bolder;
+    letter-spacing: .06rem;
+}
+#footer-section .development .webpage-links a::after{
+    content: '';
+    display: block;
+    background: var(--footer-text-color-hover);
+    height: 2px;
+    margin: 0 auto;
+    width: 0%;
+    transition: .2s ease;
+}
+#footer-section .development .webpage-links a:hover::after{
+    width: 100%;
+}
+#footer-section .development .webpage-links a:hover{
+    color: var(--footer-text-color-hover);
+}
+#footer-section .bio .title-head{
+    margin: 15px 0 0 !important;
+}
+#footer-section .bio .title-head,
+#footer-section .development .title-head,
+#footer-section .website-redirect .contact-me{
+    margin: 10px 0;
+    color: var(--footer-text-color-hover);
+}
+#footer-section .website-redirect{
+    margin: 2rem 0;
+}
+#footer-section .website-redirect #visit-my-site{
+    border-radius: 3px;
+    padding: 10px 25px;
+    text-decoration: none;
+    background: var(--footer-website-btn-color);
+    color: var(--footer-text-light-color);
+    font-weight: bolder;
+}
+
+@media (max-width: 400px) {
+    #footer-section p,
+    #footer-section a,
+    #footer-section h2{
+        font-size: 20px;
+    }
+    #footer-section h2{
+        font-size: 2.6rem;
+    }
+}

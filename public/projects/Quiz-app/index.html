@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz App</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" type="image/jpg" href="fav_icon.png"/>
+    </head>
+    <body>
+        <div class="mainbody">
+            <div class="content">
+                <div class="header">
+                    <h2>Quiz App</h2>
+                </div>
+                <div class="main-content">
+                    <div class="que-no"></div>
+                    <div class="container">
+                        <!-- <div class="que">1. What is the full form of HTML ?</div>
+                        <div class="answeres">
+                            <form oninput="ansSet()">
+                                <input type="radio" class="ansbtn" name="ans" value="A">
+                                <label>A.</label>
+                                <br>
+                                <input type="radio" class="ansbtn" name="ans" value="B">
+                                <label>B.</label>
+                                <br>
+                                <input type="radio" class="ansbtn" name="ans" value="C">
+                                <label>C.</label>
+                                <br>
+                                <input type="radio" class="ansbtn" name="ans" value="D">
+                                <label>D.</label>
+                            </form>
+                        </div> -->
+                        <!-- <div class="result">
+                            <h3>4/10</h1>
+                            <h5>You get 70% in this quiz.</h3>
+                        </div> -->
+                    </div>
+                    <a id="submit">Submit</a>
+                </div>
+                <!-- <div class="scoreBoard">
+                    <div class="resultWinLoss">
+                        <div id="winResult">Right</div>
+                        <div id="lossResult">Wrong</div>
+                    </div>
+                    <div class="scoreWinLoss">
+                    </div>
+                </div> -->
+                <div class="scoreBoard">
+                    <div class="winScore">
+                        <div id="winScore"></div>
+                    </div>
+                    <div class="itemList">Score Board</div>
+                    <div class="lossScore">
+                        <div id="lossScore"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190968825-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+    
+            gtag('config', 'UA-190968825-1');
+        </script>
+    </body>
+</html>

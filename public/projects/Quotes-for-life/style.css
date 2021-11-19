@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Quicksand&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oxygen', sans-serif;
+}
+html{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    /* background: rgb(53,68,64); */
+    /* background: rgb(10,126,121); */
+    background: rgb(19,58,86);
+}
+.header{
+    margin: 20px auto;
+    color: #a4dbff;
+    font-size: 24px;
+}
+.header h1{
+    font-family: 'Quicksand', sans-serif;
+}
+.content{
+    margin: 10px auto;
+    width: 500px;
+    padding: 20px;
+    text-align: center;
+    /* background: #1f1f1f; */
+    background: rgb(9, 26, 37);
+    border-radius: 10px;
+    letter-spacing: 0.5px;
+    box-shadow: 0px 0px 70px -12px rgb(0, 0, 0);
+}
+.header,
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content #quote{
+    color: gold;
+    margin: 5px auto;
+    font-size: 20px;
+    line-height: 30px;
+}
+.content #author{
+    color: whitesmoke;
+    margin: 5px auto;
+    font-size: 17px;
+}
+.content input{
+    border: none;
+    color: black;
+    background: gold;
+    margin: .5rem 0 0;
+    padding: 6px 14px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 18px;
+}
+@media (max-width:540px){
+    .content{
+        width: 80%;
+        padding: 20px 15px;
+    }
+    .header{
+        font-size: 17px;
+    }
+    .content #quote{
+        font-size: 17px;
+    }
+    .content #author{
+        font-size: 16px;
+    }
+    .content input{
+        font-size: 14px;
+    }
+}

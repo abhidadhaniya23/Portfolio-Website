@@ -1,0 +1,52 @@
+.m-auto{
+    margin: 0 auto;
+}
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../font/HelveticaNeue.otf') format('opentype');;
+}
+:root{
+    --color1: rgba(255, 255, 255, 0.486);
+    --color2: #030408;
+    --color3: #0304089f;
+    --color4: rgb(10,33,53);
+    --font1:'Pacifico', cursive;
+    --font2: 'Helvetica', sans-serif;
+    --font3: 'Lobster', cursive;
+    --font4: 'Play', sans-serif;
+}
+.thelogo{
+    width: 80px;
+}
+.thelogo2{
+    width: 125px;
+}
+.mylogo{
+    width: 220px;
+}
+.buttons{
+    padding: 15px 20px;
+    border: none;
+    font-family: var(--font2);
+    border-radius: 3px;
+    background: var(--color4);
+    color: rgb(223 238 241);
+    cursor: pointer;
+    font-size: 17px;
+}
+.input{
+    border: none;
+    border-radius: 3px;
+    padding: 10px 15px;
+    width: 270px;
+}
+@media (max-width: 1025px){
+    .input{
+        width: 45%;
+    }    
+}
+@media (max-width:670px){
+    .input{
+        width: 80%;
+    }
+}
