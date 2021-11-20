@@ -315,7 +315,8 @@ body {
     padding: 0 0 40px;
 }
 
-#third h2 {
+#third h2,
+#latest-blogs .header-title {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -337,7 +338,8 @@ body {
     margin: 0 10px 0 0;
 }
 
-#third h2::after {
+#third h2::after,
+#latest-blogs .header-title::after {
     content: "";
     margin: 0 20px 0;
     position: relative;
@@ -347,7 +349,8 @@ body {
     height: 3px;
 }
 
-#third h2::before {
+#third h2::before,
+#latest-blogs .header-title::before {
     content: "";
     margin: 0 20px 0;
     position: relative;
@@ -415,8 +418,8 @@ body {
     /* background-attachment: fixed; */
     /* background-position: center; */
     /* background-size: cover; */
-    background-color: #000000;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 800'%3E%3Cg %3E%3Ccircle fill='%23000000' cx='400' cy='400' r='600'/%3E%3Ccircle fill='%23000056' cx='400' cy='400' r='500'/%3E%3Ccircle fill='%2300015e' cx='400' cy='400' r='400'/%3E%3Ccircle fill='%23010666' cx='400' cy='400' r='300'/%3E%3Ccircle fill='%23130e6f' cx='400' cy='400' r='200'/%3E%3Ccircle fill='%23201577' cx='400' cy='400' r='100'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: #f0f0f0;
+    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 800'%3E%3Cg %3E%3Ccircle fill='%23000000' cx='400' cy='400' r='600'/%3E%3Ccircle fill='%23000056' cx='400' cy='400' r='500'/%3E%3Ccircle fill='%2300015e' cx='400' cy='400' r='400'/%3E%3Ccircle fill='%23010666' cx='400' cy='400' r='300'/%3E%3Ccircle fill='%23130e6f' cx='400' cy='400' r='200'/%3E%3Ccircle fill='%23201577' cx='400' cy='400' r='100'/%3E%3C/g%3E%3C/svg%3E"); */
     background-attachment: fixed;
     background-size: cover;
 }
@@ -436,7 +439,7 @@ body {
     align-items: center;
     z-index: 10;
     letter-spacing: 0.5px;
-    color: white;
+    color: var(--color1);
     font-family: var(--font1);
     font-size: 45px;
 }
@@ -447,7 +450,7 @@ body {
     position: relative;
     width: 30%;
     display: block;
-    background: var(--color2);
+    background: var(--color1);
     height: 3px;
 }
 
@@ -457,19 +460,12 @@ body {
     position: relative;
     width: 30%;
     display: block;
-    background: var(--color2);
+    background: var(--color1);
     height: 3px;
 }
 
-#forth .content .projects .about {
-    display: flex;
-    justify-content: center;
-    background: rgb(255, 255, 255, 0.1);
-    padding: 10px;
-    width: 90%;
-    margin: 30px auto;
-    box-shadow: 0px 8px 20px 0px rgb(0 0 0 / 16%);
-    backdrop-filter: blur(var(--blur));
+#forth .content .projects {
+    padding: 2rem 0;
 }
 
 #forth .content .projects .about p {
@@ -495,24 +491,33 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    width: calc((var(--project_width)) + 90px);
-    border-radius: var(--project_border_radius);
-    /* background: rgb(11, 0, 61); */
-    background: var(--color5);
     color: var(--color2);
+    transition: 0.4s ease;
 }
-
-#forth .content .projects .list .tool .project_pic img {
-    width: calc((var(--project_width)) + 90px);
-    border-top-left-radius: var(--project_border_radius);
-    border-top-right-radius: var(--project_border_radius);
+#forth .content .projects .list .tool:hover {
+    transform: scale(1.05);
     box-shadow: 0px 5px 15px 0px rgb(0 0 0 / 16%);
 }
 
+#forth .content .projects .list .tool .project_pic {
+    overflow: hidden;
+    border-radius: 10px;
+}
+#forth .content .projects .list .tool .project_pic img {
+    width: 25rem;
+    transition: 0.4s ease;
+}
+#forth .content .projects .list .tool .project_pic img:hover {
+    transform: scale(1.08);
+}
+
 #forth .content .projects .list .tool .project_name {
+    padding: 1rem 0;
+    position: relative;
+    background: white;
+    color: #000000bd;
     font-weight: 500;
-    font-size: 30px;
-    margin: 10px auto;
+    font-size: 25px;
 }
 
 #forth .content .projects .list .tool .desc {
@@ -1008,4 +1013,8 @@ body {
     .footer {
         font-size: 20px;
     }
+}
+
+.blogs-bg {
+    background: #f0f0f0;
 }
