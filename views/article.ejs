@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="rgb(23,35,47)" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         <%=title%>
@@ -13,6 +14,7 @@
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
         * {
@@ -40,7 +42,24 @@
         }
 
         body {
-            background: rgb(251, 251, 251);
+            margin: 0;
+            /* background: rgb(251, 251, 251); */
+            /* background: radial-gradient(80.99% 100% at 50% 0%, #00FF0A 0%, #36008E 100%), radial-gradient(50% 123.47% at 50% 50%, #EFE7C8 0%, #36008E 100%), linear-gradient(301.28deg, #FF006B 0%, #48DD9E 100%), linear-gradient(294.84deg, #5A60E4 0%, #D30000 100%), linear-gradient(52.29deg, #000000 0%, #00FF85 100%), radial-gradient(100% 138.69% at 100% 0%, #0007A5 0%, #FF7A00 100%), radial-gradient(70.41% 100% at 50% 0%, #D5B300 0%, #2200AA 100%);
+            background-blend-mode: screen, screen, lighten, overlay, lighten, difference, normal; */
+        }
+
+        .bg-div {
+            background: linear-gradient(125deg, #ECFCFF 0%, #ECFCFF 40%, #B2FCFF calc(40% + 1px), #B2FCFF 60%, #5EDFFF calc(60% + 1px), #5EDFFF 72%, #3E64FF calc(72% + 1px), #3E64FF 100%);
+            margin: 0;
+            height: 50rem;
+            /* background: linear-gradient(235deg, #FFFFFF 0%, #000F25 100%), linear-gradient(180deg, #6100FF 0%, #000000 100%), linear-gradient(235deg, #FFA3AC 0%, #FFA3AC 40%, #00043C calc(40% + 1px), #00043C 60%, #005D6C calc(60% + 1px), #005D6C 70%, #00C9B1 calc(70% + 1px), #00C9B1 100%), linear-gradient(125deg, #FFA3AC 0%, #FFA3AC 40%, #00043C calc(40% + 1px), #00043C 60%, #005D6C calc(60% + 1px), #005D6C 70%, #00C9B1 calc(70% + 1px), #00C9B1 100%);
+            background-blend-mode: soft-light, screen, darken, normal; */
+            background-position: center;
+            background-size: cover;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         .main-body {
@@ -56,6 +75,7 @@
             max-width: 90vw;
             border-radius: 10px;
             text-align: center;
+            max-width: 100%;
             /* margin: 2rem auto; */
         }
 
@@ -80,6 +100,7 @@
 
         h1 {
             font-size: 2.7rem;
+            font-family: 'Bitter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
         h2 {
@@ -110,6 +131,7 @@
             color: var(--dark-primary);
             font-weight: 600;
             margin: 2rem 0 -.9rem 0;
+            font-family: 'Bitter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
         hr {
@@ -117,7 +139,9 @@
         }
 
         a {
-            font-weight: 500;
+            font-family: 'Bitter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+            font-style: italic;
             color: var(--primary-color);
             text-decoration: none;
             transition: 0.3s ease;
@@ -127,37 +151,48 @@
             z-index: 1;
         }
 
-        a::before {
-            position: absolute;
-            content: '';
-            height: 2px;
-            bottom: 4px;
-            margin: 0 auto;
-            padding: 0 5px;
-            left: 0;
-            right: 0;
-            width: 90%;
-            background: var(--light-primary-color);
-            transition: 0.3s ease;
-            z-index: -1;
-        }
-
-        a:hover::before {
-            bottom: 2px;
-            height: 25px;
-            /* width: 100%; */
-        }
-
         a:hover {
+            background: var(--light-primary-color);
             color: var(--dark-primary);
         }
 
         .content {
             max-width: 65rem;
             padding: 3rem 5rem 5rem;
-            margin: 0 40px;
+            margin: 10rem 40px 0;
             box-shadow: 0 4px 24px 7px rgb(0 0 0 / 4%), 0 12px 64px 1px rgb(0 0 0 / 10%);
+            background: white;
+            position: absolute;
+            top: -4.5rem;
+            border-radius: 5px;
+            right: 30rem;
             /* box-shadow: 0 8px 60px 0 rgb(0 0 0 / 11%), 0 12px 90px 0 rgb(0 0 0 / 11%); */
+        }
+
+
+        /* scroll bar */
+        /* width */
+        ::-webkit-scrollbar {
+            height: 5px;
+            width: 7px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 500px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #080b2e2e;
+            border-radius: 500px;
+            transition: 0.4s ease;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7a7f9c;
         }
 
         code {
@@ -245,23 +280,135 @@
             align-items: center;
         }
 
+        .more-posts {
+            text-align: center;
+            margin: 2rem auto -.5rem;
+            font-size: 2rem;
+        }
+
+        .more-posts::before {
+            display: none;
+        }
+
         @media (max-width: 420px) {
             .content {
                 padding: .5rem .25rem;
             }
         }
+
+        .common-points {
+            width: 20rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            border-radius: 5px;
+            position: fixed;
+            top: 5.5rem;
+            right: 4rem;
+            padding: 1rem 2rem 2rem;
+            z-index: 50;
+            box-shadow: 0 4px 24px 7px rgb(0 0 0 / 4%), 0 12px 64px 1px rgb(0 0 0 / 10%);
+        }
+
+        .common-points h1 {
+            color: rgb(0, 18, 36);
+            margin: 1rem 0;
+        }
+
+        .common-points .links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            /* color: rgba(0, 0, 0, 0.726); */
+        }
+
+        .common-points .links a {
+            transition: 0.3s ease;
+        }
+
+        .common-points .links a::before {
+            display: none;
+        }
+
+        .common-points .links a:hover {
+            color: rgb(0, 0, 68);
+        }
+
+        @media (max-width: 1224px) {
+            .bg-div {
+                display: none;
+            }
+
+            .content {
+                max-width: initial;
+                margin: 0rem auto;
+                box-shadow: none;
+            }
+        }
+
+        @media (max-width: 724px) {
+            .content {
+                top: 0;
+            }
+        }
+
+        @media (max-width: 1600px) {
+            .common-points {
+                display: none;
+            }
+
+            .content {
+                width: 90%;
+                right: auto;
+            }
+        }
+
+        @media (max-width: 500px) {
+            html {
+                font-size: 13px;
+            }
+
+            h1 {
+                text-align: left;
+                margin: 2rem auto .2rem;
+            }
+
+            .content {
+                padding-bottom: 2rem;
+                margin: 0 auto;
+            }
+
+            pre,
+            code,
+            .token {
+                font-size: 1rem !important;
+            }
+        }
+
+        .blogs-bg {
+            background: #f0f0f0;
+        }
     </style>
 </head>
 
 <body>
+    <div class="bg-div"></div>
+    <div class="common-points">
+        <h1>Points</h1>
+        <div class="links" id="links">
+        </div>
+    </div>
     <div class="main-body">
         <div class="content">
             <h1 class="text-3xl">
                 <%=title%>
             </h1>
             <div class="flex-row-class">
-                <p><i class="fa fa-clock mr-2"></i>
-                    <%=readingTime%> min. to read ,
+                <p style="margin-right: 1rem;"><i class="fa fa-clock mr-2"></i>
+                    <%=readingTime%> min. to read
                 </p>
                 <p>
                     <%=createdTime%> ago
@@ -269,6 +416,9 @@
             </div>
             <img class="coverImg" src="<%=coverImg%>" alt="<%=title%>">
             <%- include('../partials/postContent.ejs')%>
+                <div class="main-body">
+                    <a class="more-posts" href="/#latest-blogs" target="none">Read More Posts >></a>
+                </div>
         </div>
     </div>
     <!-- <div class="mode">
@@ -279,7 +429,28 @@
 
     <script>
         const anchorTags = document.querySelectorAll('a');
-        anchorTags.forEach(Element => Element.setAttribute("target", "_blank"))
+        const morePosts = document.querySelector('.more-posts');
+        console.log(morePosts);
+        anchorTags.forEach(Element => {
+            if (morePosts == Element) {
+                Element.setAttribute("target", "")
+            }
+            else {
+                Element.setAttribute("target", "_blank")
+            }
+        })
+
+        const mainPoints = document.getElementsByTagName('h2');
+        const links = document.getElementById('links');
+        for (item of mainPoints) {
+            item.setAttribute('id', (item.innerHTML).replaceAll(' ', '-'))
+            links.innerHTML += `
+                <a href="#${(item.innerHTML).replaceAll(' ', '-')}">${item.innerHTML}</a>
+            `
+            // code to be executed
+        }
+
+        // mainPoints.forEach(Element => console.log(Element))
     </script>
 
 </body>

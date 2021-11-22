@@ -4,7 +4,8 @@ module.exports = {
         './views/**/*.ejs',
         './views/*.ejs',
         './public/**/*.html',
-        './public/*.html'
+        './public/*.html',
+        './partials/*.ejs'
     ],
     darkMode: false,
     theme: {
