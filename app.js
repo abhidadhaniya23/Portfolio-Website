@@ -4,7 +4,7 @@ const axios = require('axios')
 const blogs = require('./routes/blog')
 
 // set port number or 
-const port = 3000
+const port = process.env.PORT || 3000
 
 // set view engine
 app.set('view engine', 'ejs')
