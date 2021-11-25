@@ -44,10 +44,10 @@ function timeSince(date) {
     return Math.floor(seconds) + " seconds";
 }
 
-blogs.get('/:title', (req, res) => {
+blogs.get('/:title', async (req, res) => {
 
     try {
-        let post = userData.find(post => post.title.replace(/\s/g, '-') == req.params.title.replace(/\s/g, '-'))
+        let post = await userData.find(post => post.title.replace(/\s/g, '-') == req.params.title.replace(/\s/g, '-'))
         // console.log(post.title);
         axios.get(URL, options)
             .then(response => {

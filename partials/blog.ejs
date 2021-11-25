@@ -13,12 +13,12 @@
             <div class="flex flex-row flex-wrap justify-center items-center m-4 w-full overflow-hidden rounded-md">
                 <% articles.forEach(data=> { %>
                     <div
-                        class="bg-white overflow-hidden h-auto relative m-10 w-11/12 sm:w-full md:w-3/4 lg:w-5/12 rounded-lg pb-6 duration-300 hover:scale-105">
+                        class="blog-img-hover bg-white overflow-hidden h-auto relative m-10 w-11/12 sm:w-full md:w-3/4 lg:w-5/12 rounded-lg pb-6 duration-300">
                         <a href="/<%=data.title.replace(/\s/g, '-')%>">
                             <img class="post-img duration-200 hover:scale-105" src="<%=data.cover_image%>" alt="">
                         </a>
                         <a href="/<%=data.title.replace(/\s/g, '-')%>">
-                            <h2 class="pb-3 pt-5 px-4 text-gray-700 sm:text-2xl text-xl z-20">
+                            <h2 class="post-title pb-3 pt-5 px-4 text-gray-700 sm:text-2xl text-xl z-20">
                                 <%=data.title%>
                             </h2>
                         </a>
