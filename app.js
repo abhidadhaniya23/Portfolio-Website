@@ -1,5 +1,5 @@
 const express = require('express')
-const serverless = require('serverless-http')
+// const serverless = require('serverless-http')
 const app = express()
 const axios = require('axios')
 const blogs = require('./routes/blog')
@@ -33,5 +33,5 @@ app.listen(port, () => {
 	console.log(`Example app listening at http://localhost:${port}`)
 })
 
-module.exports = app;
-module.exports.handler = serverless(app);
+// module.exports = app;
+// module.exports.handler = serverless(app);
