@@ -221,6 +221,10 @@
 
         <script>
 
+            function opacity() {
+                document.querySelector('html').style.opacity = "0";
+            }
+
             anime.timeline({ loop: true })
                 .add({
                     targets: '.ml15 .word',

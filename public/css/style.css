@@ -822,6 +822,7 @@ video {
 html {
     overflow-x: hidden;
     scroll-behavior: smooth;
+    transition: 0.7s ease;
 }
 
 body {
