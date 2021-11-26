@@ -501,12 +501,11 @@ body {
 }
 
 #contact-me {
-    padding: 0px 0 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: whitesmoke;
+    background: #11044a;
 }
 
 #contact-me h2 {
@@ -514,7 +513,7 @@ body {
     z-index: 10;
     margin: 0px auto 30px;
     letter-spacing: 0.5px;
-    color: var(--color1);
+    color: var(--color2);
     font-family: var(--font1);
     text-decoration: none;
     font-size: 45px;
@@ -537,57 +536,26 @@ body {
 #contact-me .details .social .fa {
     padding: 10px;
     font-size: 35px;
-    color: var(--color1);
+    color: var(--color2);
     transition: 0.4s ease;
 }
 
 #contact-me .details .social .fa:hover {
-    color: var(--color5);
+    color: var(--color1);
 }
 
 #contact-me .email,
 #contact-me .contact {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     margin: 5px auto;
 }
 
-#contact-me .email .fa,
-#contact-me .contact .fa {
-    margin: 0 15px;
-    font-size: 24px;
-    color: var(--color4);
-}
-
-#contact-me .email,
-#contact-me .contact {
-    padding: 10px 20px;
-    background: var(--color1);
-    cursor: pointer;
-}
-
-#contact-me .email a,
-#contact-me .contact a {
-    text-decoration: none;
-    font-size: 24px;
-    color: var(--color4);
-}
-
-#contact-me .details #my-email,
-#contact-me .details #my-contact {
-    text-align: center;
-    display: none;
-}
-
 .footer {
-    margin-top: -40px;
+    width: 100%;
     text-align: center;
     padding: 20px;
     font-size: 25px;
     color: var(--color2);
-    background: var(--color1);
+    background: rgb(10, 1, 50);
 }
 
 /* loading animation */

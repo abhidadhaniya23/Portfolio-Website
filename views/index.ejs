@@ -177,45 +177,66 @@
                     d="M0,96L120,122.7C240,149,480,203,720,208C960,213,1200,171,1320,149.3L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
                 </path>
             </svg> -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#11044a" fill-opacity="1"
+                    d="M0,96L60,122.7C120,149,240,203,360,224C480,245,600,235,720,213.3C840,192,960,160,1080,144C1200,128,1320,128,1380,128L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+                </path>
+            </svg>
         </section>
 
         <section id="contact-me">
             <h2><i class="fa fa-user" aria-hidden="true"></i> &nbsp;Contact via</h2>
 
-            <div class="details">
-                <div onclick="showemail()" class="email">
-                    <a href="mailto:abhidadhaniya23@gmail.com">
-                        <i class="fa fa-envelope"></i>E-mail
-                    </a>
+
+            <div class="flex flex-col justify-center items-center mt-5 mb-8 w-full">
+
+                <div class="contact-form flex flex-col justify-center w-3/12">
+                    <form action="/" method="post" autocomplete="off">
+                        <input type="text" autocomplete="off"
+                            class="w-full bg-white my-2 rounded border border-none text-base outline-none text-indigo-800 py-1 px-3 leading-8"
+                            name="name" required placeholder="Name">
+                        <input type="email" autocomplete="off"
+                            class="w-full bg-white my-2 rounded border border-none text-base outline-none text-indigo-800 py-1 px-3 leading-8"
+                            name="email" required placeholder="Email">
+                        <textarea
+                            class="w-full bg-white my-2 rounded border border-none text-base outline-none text-indigo-800 py-1 px-3 leading-8"
+                            name="message" autocomplete="off" placeholder="Message" required></textarea>
+                        <input type="submit" value="Send"
+                            class="mt-4 w-full text-white hover:bg-indigo-500 border-0 py-2 px-8 focus:outline-none bg-indigo-600 duration-200 rounded text-lg cursor-pointer">
+                    </form>
                 </div>
-                <p id="my-email">Email : abhidadhaniya23@gmail.com</p>
-                <div onclick="showcall()" class="contact">
-                    <a href="tel:+919427425818">
-                        <i class="fa fa-phone"></i>Call
-                    </a>
-                </div>
-                <p id="my-contact">Call : +919427425818</p>
-                <div class="social">
-                    <a href="https://www.instagram.com/_abhi_dadhaniya_/" target="_blank"><i class="fa fa-instagram"
-                            aria-hidden="true"></i></a>
-                    <a href="https://mobile.twitter.com/abhidadhaniya3" target="_blank"><i class="fa fa-twitter"
-                            aria-hidden="true"></i></a>
-                    <a href="http://github.com/abhidadhaniya23" target="_blank"><i class="fa fa-github"
-                            aria-hidden="true"></i></a>
-                    <a href="https://t.me/joinchat/dSygKsLTrXY3ZTk9" target="_blank"><i class="fa fa-telegram"
-                            aria-hidden="true"></i></a>
-                    <a href="https://wa.me/message/P5X347M66RNDN1" target="_blank"><i class="fa fa-whatsapp"
-                            aria-hidden="true"></i></a>
+
+                <div class="details">
+                    <!-- <div class="email">
+                        <a href="mailto:abhidadhaniya23@gmail.com">
+                            <i class="fa fa-envelope"></i>abhidadhaniya23@gmail.com
+                        </a>
+                    </div>
+                    <div class="contact">
+                        <a href="tel:+919427425818">
+                            <i class="fa fa-phone"></i>+91 9427425818
+                        </a>
+                    </div> -->
+                    <div class="social">
+                        <a href="https://www.instagram.com/_abhi_dadhaniya_/" target="_blank"><i class="fa fa-instagram"
+                                aria-hidden="true"></i></a>
+                        <a href="https://mobile.twitter.com/abhidadhaniya3" target="_blank"><i class="fa fa-twitter"
+                                aria-hidden="true"></i></a>
+                        <a href="http://github.com/abhidadhaniya23" target="_blank"><i class="fa fa-github"
+                                aria-hidden="true"></i></a>
+                        <a href="https://t.me/joinchat/dSygKsLTrXY3ZTk9" target="_blank"><i class="fa fa-telegram"
+                                aria-hidden="true"></i></a>
+                        <a href="https://wa.me/message/P5X347M66RNDN1" target="_blank"><i class="fa fa-whatsapp"
+                                aria-hidden="true"></i></a>
+                    </div>
                 </div>
             </div>
 
-        </section>
-
-        <section id="contact-me-footer">
             <div class="footer">
-                Copyright &#169; 2021 || Created By &#10084; Abhi Dadhaniya
+                Copyright &#169; 2021 || Created With &#10084; By Abhi Dadhaniya
             </div>
         </section>
+
 
 
 
@@ -318,27 +339,6 @@
             function displayBlock() {
                 loadingAnimation.style.display = 'none';
             }
-
-
-            function showemail() {
-                if (innerWidth > 500) {
-                    let email = document.getElementById('my-email');
-                    email.style.display = 'block';
-                }
-                else {
-                    email.style.display = 'none';
-                }
-            }
-            function showcall() {
-                if (innerWidth > 500) {
-                    let contact = document.getElementById('my-contact');
-                    contact.style.display = 'block';
-                }
-                else {
-                    contact.style.display = 'none';
-                }
-            }
-
 
             let logo = document.getElementById('logo');
             let ul = document.getElementById('ul');
