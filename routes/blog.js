@@ -7,13 +7,6 @@ const path = require('path')
 
 const URL = 'https://dev.to/api/articles/me/published'
 
-let userData
-
-axios.get('https://dev.to/api/articles?username=abhidadhaniya23')
-    .then(response => {
-        userData = response.data
-    });
-
 const options = {
     headers: { 'api-key': process.env.API_KEY },
     params: { 'per_page': 10 }
@@ -47,34 +40,44 @@ function timeSince(date) {
 blogs.get('/:title', async (req, res) => {
 
     try {
-        let post = await userData.find(post => post.title.replace(/\s/g, '-') == req.params.title.replace(/\s/g, '-'))
-        // console.log(post.title);
-        axios.get(URL, options)
+        axios.get('https://dev.to/api/articles?username=abhidadhaniya23')
             .then(response => {
-                response.data.forEach(article => {
-                    if (article.title == post.title) {
-                        const articleContent = md.render(article.body_markdown.replace(/\\n/g, '\n'))
-                        fs.writeFile('partials/postContent.ejs', articleContent, err => {
-                            if (err) {
-                                console.log(err);
+                userData = response.data
+                let post = userData.find(post => post.title.replace(/\s/g, '-') === req.params.title.replace(/\s/g, '-'))
+                console.log(post);
+                axios.get(URL, options)
+                    .then(response => {
+                        response.data.forEach(article => {
+                            // console.log(`Article title : ${article.title}`)
+                            // console.log(`Post title : ${post.title}`)
+
+                            if (article.title == post.title) {
+                                const articleContent = md.render(article.body_markdown.replace(/\\n/g, '\n'))
+                                fs.writeFile('partials/postContent.ejs', articleContent, err => {
+                                    if (err) {
+                                        console.log(err);
+                                    }
+                                    let myDate = new Date(article.published_at);
+                                    let result = myDate.getTime(myDate);
+                                    res.render('article.ejs', {
+                                        title: article.title,
+                                        // content: articleContent,
+                                        createdTime: timeSince(result),
+                                        readingTime: article.reading_time_minutes,
+                                        coverImg: article.cover_image
+                                    })
+                                    // console.log('Successfully Done!');
+                                })
                             }
-                            var myDate = new Date(article.published_at);
-                            var result = myDate.getTime(myDate);
-                            res.render('article.ejs', {
-                                title: article.title,
-                                // content: articleContent,
-                                createdTime: timeSince(result),
-                                readingTime: article.reading_time_minutes,
-                                coverImg: article.cover_image
-                            })
-                            // console.log('Successfully Done!');
+                            else {
+                                console.log('Post title not found...!');
+                            }
                         })
-                    }
-                })
-            })
-            .catch(error => {
-                console.log('ERROR: ', error)
-            })
+                    })
+                    .catch(error => {
+                        console.log('ERROR: ', error)
+                    })
+            });
     } catch (error) {
         console.log(error);
     }
