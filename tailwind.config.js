@@ -14,7 +14,10 @@ module.exports = {
             },
             colors: {
                 primary: {
-                    DEFAULT: '#0af'
+                    DEFAULT: '#0af',
+                    dark_blue: '#0a0132',
+                    primary_purple: '#4f46e5',
+                    light_purple: '#4f46e52e'
                 }
             }
         }

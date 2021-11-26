@@ -3,18 +3,6 @@
 @tailwind utilities;
 
 /* --------------- new blogs styling ----------- */
-.gradient-layer {
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    /* background: yellow; */
-    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.945)));
-    background: -webkit-linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.945));
-    background: -o-linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.945));
-    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.945));
-}
 .post-img {
     transition: 0.55s ease;
 }
@@ -28,10 +16,38 @@
 .post-img:hover .post-title:hover {
     color: blue;
 }
-/* .gradient-layer:hover {
-    --scale: 1.3;
+
+/* ---------- loading animation ------------- */
+.loader {
+    margin: 0 auto;
+    border: 4px solid #01243b;
+    border-radius: 50%;
+    border-top: 4px solid #f3f3f3;
+    width: 25px;
+    height: 25px;
+    -webkit-animation: spin 1s linear infinite; /* Safari */
+    animation: spin 1s linear infinite;
 }
-.post-img {
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* .post-img {
     transform: scale(var(--scale));
 } */
 
@@ -54,20 +70,6 @@
     --color3: #121e31;
     --color4: rgb(240, 240, 240);
     --color5: rgb(30, 7, 134);
-}
-
-#svg_first {
-    position: relative;
-}
-
-#svgInverse {
-    position: relative;
-    top: -2px;
-}
-
-#svg2 {
-    position: relative;
-    top: -2px;
 }
 
 * {
@@ -237,7 +239,7 @@ body {
 #second h2 {
     width: 90%;
     z-index: 10;
-    margin: 0px auto 30px;
+    margin: 0px auto 40px;
     letter-spacing: 0.5px;
     color: white;
     font-family: var(--font1);
@@ -414,11 +416,11 @@ body {
     padding: 2rem 0;
 }
 
-#forth .content .projects .about p {
+/* #forth .content .projects .about p {
     text-align: center;
     font-size: 25px;
     color: var(--color2);
-}
+} */
 
 #forth .content .projects .list {
     display: flex;
@@ -466,7 +468,7 @@ body {
     font-size: 25px;
 }
 
-#forth .content .projects .list .tool .desc {
+/* #forth .content .projects .list .tool .desc {
     color: rgb(212, 212, 212);
     padding: 0px 15px 5px;
     text-align: center;
@@ -474,9 +476,9 @@ body {
     font-size: 20px;
     font-weight: 300;
     letter-spacing: 0.5px;
-}
+} */
 
-#forth .content .projects .list .tool .link {
+/* #forth .content .projects .list .tool .link {
     margin: 10px auto;
     display: flex;
     flex-direction: column;
@@ -493,7 +495,7 @@ body {
     text-decoration: none;
     font-size: 20px;
     font-weight: 300;
-}
+} */
 
 #fifth-top {
     position: relative;
@@ -524,9 +526,9 @@ body {
     text-align: center;
 }
 
-#contact-me .details .name p {
+/* #contact-me .details .name p {
     font-size: 20px;
-}
+} */
 
 #contact-me .details .social {
     margin: 20px auto;
@@ -544,10 +546,10 @@ body {
     color: var(--color1);
 }
 
-#contact-me .email,
+/* #contact-me .email,
 #contact-me .contact {
     margin: 5px auto;
-}
+} */
 
 .footer {
     width: 100%;

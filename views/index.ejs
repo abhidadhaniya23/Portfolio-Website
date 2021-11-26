@@ -164,7 +164,7 @@
         <section id="forth">
             <div class="content">
                 <div class="heading">
-                    <h2><i class="fa fa-jsfiddle" aria-hidden="true"></i> Development</h2>
+                    <h2 class="mb-9"><i class="fa fa-jsfiddle" aria-hidden="true"></i> Development</h2>
                 </div>
                 <div class="projects container mx-auto">
                     <div class="list">
@@ -185,24 +185,34 @@
         </section>
 
         <section id="contact-me">
-            <h2><i class="fa fa-user" aria-hidden="true"></i> &nbsp;Contact via</h2>
+            <h2><i class="fa fa-user" aria-hidden="true"></i> &nbsp;Contact Me</h2>
 
 
             <div class="flex flex-col justify-center items-center mt-5 mb-8 w-full">
 
-                <div class="contact-form flex flex-col justify-center w-3/12">
-                    <form action="/" method="post" autocomplete="off">
-                        <input type="text" autocomplete="off"
-                            class="w-full bg-white my-2 rounded border border-none text-base outline-none text-indigo-800 py-1 px-3 leading-8"
-                            name="name" required placeholder="Name">
-                        <input type="email" autocomplete="off"
-                            class="w-full bg-white my-2 rounded border border-none text-base outline-none text-indigo-800 py-1 px-3 leading-8"
-                            name="email" required placeholder="Email">
-                        <textarea
-                            class="w-full bg-white my-2 rounded border border-none text-base outline-none text-indigo-800 py-1 px-3 leading-8"
-                            name="message" autocomplete="off" placeholder="Message" required></textarea>
-                        <input type="submit" value="Send"
-                            class="mt-4 w-full text-white hover:bg-indigo-500 border-0 py-2 px-8 focus:outline-none bg-indigo-600 duration-200 rounded text-lg cursor-pointer">
+                <div class="contact-form flex flex-col justify-center md:w-5/12 lg:w-3/12 w-10/12">
+                    <form action="/" method="post" id="contactForm" autocomplete="off">
+                        <div class="flex flex-row justify-center items-center">
+                            <input type="text" autocomplete="off"
+                                class="w-full bg-primary-dark_blue border-2 border-solid border-transparent focus:border-primary-primary_purple duration-200 my-2 rounded text-base outline-none text-indigo-200 py-3 px-3 leading-8"
+                                name="name" id="name" required placeholder="Name">
+                        </div>
+                        <div class="flex flex-row justify-center items-center">
+                            <input type="email" autocomplete="off"
+                                class="w-full bg-primary-dark_blue border-2 border-solid border-transparent focus:border-primary-primary_purple duration-200 my-2 rounded text-base outline-none text-indigo-200 py-3 px-3 leading-8"
+                                name="email" id="email" required placeholder="Email">
+                        </div>
+                        <div class="flex flex-row justify-center items-center">
+                            <textarea
+                                class="w-full bg-primary-dark_blue border-2 border-solid border-transparent focus:border-primary-primary_purple duration-200 my-2 rounded text-base outline-none text-indigo-200 py-3 px-3 leading-8"
+                                name="message" id="msg" autocomplete="off" required placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" onclick="validate()" id="submit"
+                            class="mt-4 w-full text-white border-2 p-2.5 border-solid bg-transparent border-primary-primary_purple hover:bg-primary-light_purple focus:bg-primary-light_purple bg-indigo-600 duration-200 rounded text-lg cursor-pointer">
+                            Send
+                        </button>
+                        <!-- <input type="submit" value="Send"
+                            class="mt-4 w-full text-white border-2 p-2.5 border-solid bg-transparent border-primary-primary_purple hover:bg-primary-light_purple focus:bg-primary-light_purple bg-indigo-600 duration-200 rounded text-lg cursor-pointer"> -->
                     </form>
                 </div>
 
@@ -244,6 +254,29 @@
 
             function opacity() {
                 document.querySelector('html').style.opacity = "0";
+            }
+
+            let email = document.getElementById('email');
+            let name = document.getElementById('name');
+            let msg = document.getElementById('msg');
+            let loader = document.querySelector('.loader');
+            let submit = document.getElementById('submit');
+
+
+            function validate() {
+                if (!(name.value === '' || msg.value === '' || !ValidateEmail(email.value))) {
+                    submit.innerHTML = `<div class="loader"></div>`;
+                    submit.style.pointerEvents = "none";
+                }
+            }
+
+            function ValidateEmail(mail) {
+                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+                    return (true)
+                }
+                else {
+                    return (false);
+                }
             }
 
             anime.timeline({ loop: true })
