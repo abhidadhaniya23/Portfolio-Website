@@ -48,14 +48,12 @@ blogs.get('/:title', (req, res) => {
                 axios.get(URL, options)
                     .then(response => {
                         response.data.forEach(article => {
-                            // console.log(`Article title : ${article.title}`)
-                            // console.log(`Post title : ${post.title}`)
-
                             if (article.title == post.title) {
+
                                 const articleContent = md.render(article.body_markdown.replace(/\\n/g, '\n'))
-                                // console.log(articleContent);
                                 let myDate = new Date(article.published_at);
                                 let result = myDate.getTime(myDate);
+
                                 res.render('article.ejs', {
                                     title: article.title,
                                     content: articleContent,
@@ -63,6 +61,7 @@ blogs.get('/:title', (req, res) => {
                                     readingTime: article.reading_time_minutes,
                                     coverImg: article.cover_image
                                 })
+
                                 // fs.unlink(path.join(__dirname, '../partials/postContent.ejs'), err => { console.log(err); })
                             }
                         })
