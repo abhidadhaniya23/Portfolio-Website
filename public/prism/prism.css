@@ -22,8 +22,7 @@
 
 pre[class*="language-"],
 code[class*="language-"] {
-    /* color: #3ab6df; */
-    color: #080b2e;
+    color: #f3722c;
     font-size: 18px;
     text-shadow: none;
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
@@ -46,7 +45,7 @@ code[class*="language-"]::selection,
 pre[class*="language-"]::mozselection,
 code[class*="language-"]::mozselection {
     text-shadow: none;
-    background: #00fffb;
+    background: #b3d4fc;
 }
 @media print {
     pre[class*="language-"],
@@ -58,13 +57,13 @@ pre[class*="language-"] {
     padding: 1em;
     margin: 0.5em 0;
     overflow: auto;
-    background: var(--light-bg);
+    background: #fafafa;
 }
 :not(pre) > code[class*="language-"] {
     padding: 0.1em 0.3em;
     border-radius: 0.3em;
     color: #db4c69;
-    background: #ab4f69;
+    background: white;
 }
 /*********************************************************
 * Tokens
@@ -76,15 +75,10 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: #93a1a1;
-    letter-spacing: -0.7px;
+    color: #7f848e;
 }
 .token.punctuation {
-    color: #999999;
-    letter-spacing: -0.7px;
-}
-.token {
-    letter-spacing: -0.7px !important;
+    color: #9d9d9d;
 }
 .token.property,
 .token.tag,
@@ -93,7 +87,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-    color: #11a5e4;
+    color: #577590;
 }
 .token.selector,
 .token.attr-name,
@@ -101,28 +95,28 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-    color: #669900;
+    color: #099ddc;
 }
 .token.operator,
 .token.entity,
 .token.url,
 .language-css .token.string,
 .style .token.string {
-    color: #ff870f;
-    background: var(--light-bg);
+    color: #43aa8b;
+    background: #fcfcfc;
 }
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-    color: #e0276a;
+    color: #f94144;
 }
 .token.function {
-    color: #dd4a68;
+    color: #577590;
 }
 .token.regex,
 .token.important,
 .token.variable {
-    color: #ee9900;
+    color: #24b2ff;
 }
 .token.important,
 .token.bold {
@@ -150,8 +144,8 @@ pre[class*="language-"] > code[class*="language-"] {
     right: 0;
     padding: inherit 0;
     margin-top: 1em;
-    background: #f7ebc6;
-    box-shadow: inset 5px 0 0 #f7d87c;
+    background: #fcfcfc;
+    box-shadow: inset 5px 0 0 white;
     z-index: 0;
     pointer-events: none;
     line-height: inherit;

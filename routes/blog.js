@@ -4,6 +4,7 @@ const axios = require('axios')
 var md = require('markdown-it')();
 const fs = require('fs')
 const path = require('path')
+const cors = require('cors')
 
 const URL = 'https://dev.to/api/articles/me/published'
 
@@ -37,14 +38,14 @@ function timeSince(date) {
     return Math.floor(seconds) + " seconds";
 }
 
-blogs.get('/:title', async (req, res) => {
+blogs.get('/:title', cors(), (req, res) => {
 
     try {
         axios.get('https://dev.to/api/articles?username=abhidadhaniya23')
             .then(response => {
                 userData = response.data
                 let post = userData.find(post => post.title.replace(/\s/g, '-') === req.params.title.replace(/\s/g, '-'))
-                console.log(post);
+                // console.log(post);
                 axios.get(URL, options)
                     .then(response => {
                         response.data.forEach(article => {
@@ -68,9 +69,6 @@ blogs.get('/:title', async (req, res) => {
                                     })
                                     // console.log('Successfully Done!');
                                 })
-                            }
-                            else {
-                                console.log('Post title not found...!');
                             }
                         })
                     })

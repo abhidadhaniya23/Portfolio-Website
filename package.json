@@ -9,7 +9,7 @@
     "scripts": {
         "start": "node app.js",
         "dev": "nodemon app.js",
-        "buildCSS": "postcss ./public/css/tailwind.css -o ./public/css/style.css -w"
+        "build": "postcss ./public/css/tailwind.css -o ./public/css/style.css -w"
     },
     "keywords": [],
     "author": "",
@@ -17,6 +17,7 @@
     "dependencies": {
         "autoprefixer": "^10.4.0",
         "axios": "^0.24.0",
+        "cors": "^2.8.5",
         "dotenv": "^10.0.0",
         "ejs": "^3.1.6",
         "express": "^4.17.1",

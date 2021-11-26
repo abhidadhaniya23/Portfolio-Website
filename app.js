@@ -1,4 +1,6 @@
 const express = require('express')
+const cors = require('cors')
+
 // const serverless = require('serverless-http')
 const app = express()
 const axios = require('axios')
@@ -13,6 +15,7 @@ app.set('view engine', 'ejs')
 // middleware
 app.use(express.static('public'))
 app.use(express.static('public/projects'))
+app.use(cors())
 app.use('/', blogs)
 
 
