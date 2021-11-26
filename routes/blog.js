@@ -58,15 +58,18 @@ blogs.get('/:title', cors(), (req, res) => {
                                     if (err) {
                                         console.log(err);
                                     }
-                                    let myDate = new Date(article.published_at);
-                                    let result = myDate.getTime(myDate);
-                                    res.render('article.ejs', {
-                                        title: article.title,
-                                        // content: articleContent,
-                                        createdTime: timeSince(result),
-                                        readingTime: article.reading_time_minutes,
-                                        coverImg: article.cover_image
-                                    })
+                                    else {
+                                        let myDate = new Date(article.published_at);
+                                        let result = myDate.getTime(myDate);
+                                        res.render('article.ejs', {
+                                            title: article.title,
+                                            // content: articleContent,
+                                            createdTime: timeSince(result),
+                                            readingTime: article.reading_time_minutes,
+                                            coverImg: article.cover_image
+                                        })
+                                        fs.unlinkSync('partials/postContent.ejs', err => { console.log(err); })
+                                    }
                                     // console.log('Successfully Done!');
                                 })
                             }
