@@ -53,8 +53,9 @@ blogs.get('/:title', cors(), (req, res) => {
                             // console.log(`Post title : ${post.title}`)
 
                             if (article.title == post.title) {
-                                const articleContent = md.render(article.body_markdown.replace(/\\n/g, '\n'))
-                                fs.writeFile(path.join(__dirname, '../partials/postContent.ejs'), articleContent, err => {
+                                console.log(article.body_markdown.replace(/\\n/g, '\n'));
+                                // const articleContent = md.render(article.body_markdown.replace(/\\n/g, '\n'))
+                                fs.writeFile(path.join(__dirname, '../partials/postContent.ejs'), article.body_markdown.replace(/\\n/g, '\n'), err => {
                                     if (err) {
                                         console.log(err);
                                     }
