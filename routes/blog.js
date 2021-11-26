@@ -53,24 +53,17 @@ blogs.get('/:title', (req, res) => {
 
                             if (article.title == post.title) {
                                 const articleContent = md.render(article.body_markdown.replace(/\\n/g, '\n'))
-                                fs.writeFile(path.join(__dirname, '../partials/postContent.ejs'), articleContent, err => {
-                                    if (err) {
-                                        throw err;
-                                    }
-                                    else {
-                                        let myDate = new Date(article.published_at);
-                                        let result = myDate.getTime(myDate);
-                                        res.render('article.ejs', {
-                                            title: article.title,
-                                            // content: articleContent,
-                                            createdTime: timeSince(result),
-                                            readingTime: article.reading_time_minutes,
-                                            coverImg: article.cover_image
-                                        })
-                                        fs.unlink(path.join(__dirname, '../partials/postContent.ejs'), err => { console.log(err); })
-                                    }
-                                    // console.log('Successfully Done!');
+                                // console.log(articleContent);
+                                let myDate = new Date(article.published_at);
+                                let result = myDate.getTime(myDate);
+                                res.render('article.ejs', {
+                                    title: article.title,
+                                    content: articleContent,
+                                    createdTime: timeSince(result),
+                                    readingTime: article.reading_time_minutes,
+                                    coverImg: article.cover_image
                                 })
+                                // fs.unlink(path.join(__dirname, '../partials/postContent.ejs'), err => { console.log(err); })
                             }
                         })
                     })

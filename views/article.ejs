@@ -439,7 +439,13 @@
                 </p>
             </div>
             <img class="coverImg" src="<%=coverImg%>" alt="<%=title%>">
-            <%- include('../partials/postContent.ejs')%>
+            <div id="html-content">
+                <script>
+                    console.log('inner html appended...');
+                    document.getElementById('html-content').innerHTML = `<%-content%>`;
+                </script>
+            </div>
+            <%#- include('../partials/postContent.ejs')%>
                 <div class="main-body">
                     <a class="more-posts" href="/#latest-blogs" target="none">Read More Posts >></a>
                 </div>
