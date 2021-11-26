@@ -765,6 +765,7 @@ body {
     #third h2,
     #forth .content .heading h2,
     #contact-me h2 {
+        margin: 3rem 0 1.7rem;
         font-size: 38px;
     }
 
