@@ -4,7 +4,6 @@ const axios = require('axios')
 var md = require('markdown-it')();
 const fs = require('fs')
 const path = require('path')
-const cors = require('cors')
 
 const URL = 'https://dev.to/api/articles/me/published'
 
@@ -38,7 +37,7 @@ function timeSince(date) {
     return Math.floor(seconds) + " seconds";
 }
 
-blogs.get('/:title', cors(), (req, res) => {
+blogs.get('/:title', (req, res) => {
 
     try {
         axios.get('https://dev.to/api/articles?username=abhidadhaniya23')
@@ -53,11 +52,10 @@ blogs.get('/:title', cors(), (req, res) => {
                             // console.log(`Post title : ${post.title}`)
 
                             if (article.title == post.title) {
-                                console.log(article.body_markdown.replace(/\\n/g, '\n'));
-                                // const articleContent = md.render(article.body_markdown.replace(/\\n/g, '\n'))
-                                fs.writeFile(path.join(__dirname, '../partials/postContent.ejs'), article.body_markdown.replace(/\\n/g, '\n'), err => {
+                                const articleContent = md.render(article.body_markdown.replace(/\\n/g, '\n'))
+                                fs.writeFile(path.join(__dirname, '../partials/postContent.ejs'), articleContent, err => {
                                     if (err) {
-                                        console.log(err);
+                                        throw err;
                                     }
                                     else {
                                         let myDate = new Date(article.published_at);
@@ -69,7 +67,7 @@ blogs.get('/:title', cors(), (req, res) => {
                                             readingTime: article.reading_time_minutes,
                                             coverImg: article.cover_image
                                         })
-                                        fs.unlinkSync(path.join(__dirname, '../partials/postContent.ejs'), err => { console.log(err); })
+                                        fs.unlink(path.join(__dirname, '../partials/postContent.ejs'), err => { console.log(err); })
                                     }
                                     // console.log('Successfully Done!');
                                 })

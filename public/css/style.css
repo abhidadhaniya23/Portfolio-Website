@@ -716,10 +716,6 @@ video {
 .pl-5 {
 	padding-left: 1.25rem;
 }
-.text-3xl {
-	font-size: 1.875rem;
-	line-height: 2.25rem;
-}
 .\!text-4xl {
 	font-size: 2.25rem !important;
 	line-height: 2.5rem !important;
@@ -731,9 +727,6 @@ video {
 .text-sm {
 	font-size: 0.875rem;
 	line-height: 1.25rem;
-}
-.font-normal {
-	font-weight: 400;
 }
 .text-gray-700 {
 	--tw-text-opacity: 1;
