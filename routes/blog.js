@@ -54,7 +54,7 @@ blogs.get('/:title', cors(), (req, res) => {
 
                             if (article.title == post.title) {
                                 const articleContent = md.render(article.body_markdown.replace(/\\n/g, '\n'))
-                                fs.writeFile(path.join(__dirname, '../partials/blog.ejs'), articleContent, err => {
+                                fs.writeFile(path.join(__dirname, '../partials/postContent.ejs'), articleContent, err => {
                                     if (err) {
                                         console.log(err);
                                     }
@@ -68,7 +68,7 @@ blogs.get('/:title', cors(), (req, res) => {
                                             readingTime: article.reading_time_minutes,
                                             coverImg: article.cover_image
                                         })
-                                        fs.unlinkSync(path.join(__dirname, '../partials/blog.ejs'), err => { console.log(err); })
+                                        fs.unlinkSync(path.join(__dirname, '../partials/postContent.ejs'), err => { console.log(err); })
                                     }
                                     // console.log('Successfully Done!');
                                 })
