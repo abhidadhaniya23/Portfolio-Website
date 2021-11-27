@@ -759,6 +759,9 @@ video {
 	--tw-bg-opacity: 1;
 	background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
 }
+.bg-primary-light_purple {
+	background-color: #4f46e52e;
+}
 .p-2\.5 {
 	padding: 0.625rem;
 }
@@ -842,6 +845,9 @@ video {
 }
 .leading-8 {
 	line-height: 2rem;
+}
+.leading-6 {
+	line-height: 1.5rem;
 }
 .text-indigo-200 {
 	--tw-text-opacity: 1;
@@ -957,6 +963,8 @@ video {
 }
 
 html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
     overflow-x: hidden;
     scroll-behavior: smooth;
     transition: 0.7s ease;
@@ -1025,7 +1033,7 @@ body {
     background: var(--color4);
 }
 #first .content {
-    margin: 14rem 0 5rem;
+    margin: 10rem 0 5rem;
 }
 
 #first .heading {
@@ -1787,52 +1795,8 @@ body {
         padding: 40px 0;
     }
 
-    #forth .content .projects .list .tool .link {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #forth .content .projects .list .tool .link {
-        margin: 20px auto;
-    }
-
-    #forth .content .projects .list .tool .desc,
-    #forth .content .projects .about p {
-        font-size: 20px;
-    }
-
     #forth .content .projects .list .tool .project_name {
         font-size: 24px;
-    }
-
-    #forth .content .projects .list .tool .link a {
-        margin: 5px auto;
-        font-size: 17px;
-    }
-
-    #forth .content .projects .about p {
-        font-size: 22px;
-    }
-
-    #contact-me .email .fa,
-    #contact-me .contact .fa {
-        margin: 0 15px;
-        font-size: 20px;
-        color: var(--color4);
-    }
-
-    #contact-me .details .social .fa {
-        padding: 5px;
-        font-size: 30px;
-    }
-
-    #contact-me .email a,
-    #contact-me .contact a {
-        text-decoration: none;
-        font-size: 20px;
-        color: var(--color4);
     }
 
     .footer {
@@ -1853,6 +1817,10 @@ body {
 .hover\:bg-blue-600:hover {
 	--tw-bg-opacity: 1;
 	background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
+}
+
+.hover\:bg-transparent:hover {
+	background-color: transparent;
 }
 
 .focus\:border-primary-primary_purple:focus {
