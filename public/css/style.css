@@ -638,6 +638,10 @@ video {
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
 }
+.my-5 {
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+}
 .mr-2 {
 	margin-right: 0.5rem;
 }
@@ -719,9 +723,6 @@ video {
 .border-2 {
 	border-width: 2px;
 }
-.border-0 {
-	border-width: 0px;
-}
 .border-solid {
 	border-style: solid;
 }
@@ -736,20 +737,15 @@ video {
 	--tw-bg-opacity: 1;
 	background-color: rgba(10, 1, 50, var(--tw-bg-opacity));
 }
+.bg-primary-light_purple {
+	background-color: #4f46e52e;
+}
 .bg-transparent {
 	background-color: transparent;
 }
 .bg-indigo-600 {
 	--tw-bg-opacity: 1;
 	background-color: rgba(79, 70, 229, var(--tw-bg-opacity));
-}
-.bg-gray-900 {
-	--tw-bg-opacity: 1;
-	background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
-}
-.bg-blue-500 {
-	--tw-bg-opacity: 1;
-	background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
 }
 .bg-gray-100 {
 	--tw-bg-opacity: 1;
@@ -758,9 +754,6 @@ video {
 .bg-white {
 	--tw-bg-opacity: 1;
 	background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-}
-.bg-primary-light_purple {
-	background-color: #4f46e52e;
 }
 .p-2\.5 {
 	padding: 0.625rem;
@@ -775,14 +768,6 @@ video {
 .px-3 {
 	padding-left: 0.75rem;
 	padding-right: 0.75rem;
-}
-.py-2 {
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
-}
-.px-8 {
-	padding-left: 2rem;
-	padding-right: 2rem;
 }
 .px-4 {
 	padding-left: 1rem;
@@ -845,9 +830,6 @@ video {
 }
 .leading-8 {
 	line-height: 2rem;
-}
-.leading-6 {
-	line-height: 1.5rem;
 }
 .text-indigo-200 {
 	--tw-text-opacity: 1;
@@ -1810,17 +1792,12 @@ body {
 	transform: var(--tw-transform);
 }
 
-.hover\:bg-primary-light_purple:hover {
-	background-color: #4f46e52e;
-}
-
-.hover\:bg-blue-600:hover {
-	--tw-bg-opacity: 1;
-	background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
-}
-
 .hover\:bg-transparent:hover {
 	background-color: transparent;
+}
+
+.hover\:bg-primary-light_purple:hover {
+	background-color: #4f46e52e;
 }
 
 .focus\:border-primary-primary_purple:focus {
@@ -1830,11 +1807,6 @@ body {
 
 .focus\:bg-primary-light_purple:focus {
 	background-color: #4f46e52e;
-}
-
-.focus\:outline-none:focus {
-	outline: 2px solid transparent;
-	outline-offset: 2px;
 }
 
 @media (min-width: 640px) {

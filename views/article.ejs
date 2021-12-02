@@ -290,16 +290,22 @@
             align-items: center;
         }
 
-        .more-posts {
+        .more-posts,
+        .about-author {
             text-align: center;
             margin: 2rem auto -0.5rem;
-            font-size: 2rem;
-            padding: 0.8rem 2rem;
+            font-size: 1.6rem;
+            padding: 0.5rem 1.7rem;
             color: #0b4a97;
             transition: 0.3s ease;
             border-radius: 7px;
             background: #d3f0ff;
             border: 2px solid #a5e0ff;
+        }
+
+        .author {
+            margin: 1rem auto 3rem;
+            text-align: center;
         }
 
         .more-posts:hover {
@@ -439,6 +445,9 @@
                 <p>
                     <%=createdTime%> ago
                 </p>
+            </div>
+            <div class="author">
+                <a href="/" class="about-author">About Developer</a>
             </div>
             <img class="coverImg" src="<%=coverImg%>" alt="<%=title%>">
             <div id="html-content">
