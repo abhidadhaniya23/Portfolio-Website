@@ -100,6 +100,10 @@
             <div class="skill-class">
                 <div id="js" class="skill js"></div>
             </div>
+            <p>React.JS</p>
+            <div class="skill-class">
+                <div id="react" class="skill react"></div>
+            </div>
             <p>Node.Js & Express.Js</p>
             <div class="skill-class">
                 <div id="node_express" class="skill node-express"></div>
@@ -127,15 +131,16 @@
         <h2><i class="fa fa-user-circle" aria-hidden="true"></i>About Me</h2>
 
         <div class="about">
-            <div class="photo">
-                <img class="lazy" data-src="assets/pic.jpeg">
+            <div class="photo flex flex-col justify-center items-center">
+                <img class="lazy mb-4 mx-auto" data-src="assets/pic.jpeg">
+                <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="AbhiDadhaniya07" data-color="#5F7FFF" data-emoji="🥤"  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
             </div>
             <div class="me">
                 <div class="desc">
                     <p>Hello, My name is Abhi. I am full-stack web developer. Currently, I am pursuing computer
                         engineering. I've started my work
                         as
-                        a fresher. I am learning no-sql database technology (MongoDB) for web-development.
+                        a fresher. I am learning MERN Stack for web-development.
                         watch my front-end & back-end web projects
                         below.
                         <br>
@@ -146,29 +151,37 @@
                 </div>
                 <div class="social">
                     <a href="https://www.instagram.com/_abhi_dadhaniya_/" target="_blank"><i class="fa fa-instagram"
-                            aria-hidden="true"></i></a>
+                        aria-hidden="true"></i></a>
                     <a href="https://mobile.twitter.com/abhidadhaniya3" target="_blank"><i class="fa fa-twitter"
+                        aria-hidden="true"></i></a>
+                        <a href="http://github.com/abhidadhaniya23" target="_blank"><i class="fa fa-github"
                             aria-hidden="true"></i></a>
-                    <a href="http://github.com/abhidadhaniya23" target="_blank"><i class="fa fa-github"
-                            aria-hidden="true"></i></a>
-                </div>
-            </div>
+                        </div>
+                    </div>
         </div>
-
-
+        
+        
     </section>
-
-
+    
+    
     <%- include('../partials/blog.ejs') %>
-
-        <section id="forth">
-            <div class="content">
-                <div class="heading">
-                    <h2 class="mb-9"><i class="fa fa-jsfiddle" aria-hidden="true"></i> Development</h2>
-                </div>
-                <div class="projects container mx-auto">
-                    <div class="list">
-                        <!-- implement projects using json data -->
+    
+    <section id="notion-resources" class="text-center bg-[#f3f4f6]">
+        <h2 class="mb-12 text-4xl mx-auto text-primary-primary_purple font-medium"><i class="fa fa-code"></i> Web Development Resources</h2>
+        <div class="flex items-center justify-center flex-col">
+            <img class="lazy mb-4 mx-auto w-11/12 md:w-9/12" data-src="assets/devresources.png">
+                <a href="https://web-dev-resources.notion.site/Web-Development-Resources-be1207bcc32e434481c1ce6e90756964" class="resources-btn mb-10" target="_blank">Get for free</a>
+        </div>
+    </section>
+    
+    <section id="forth">
+        <div class="content pt-28 pb-16">
+            <div class="heading">
+                <h2 class="mb-9"><i class="fa fa-jsfiddle" aria-hidden="true"></i> Development</h2>
+            </div>
+            <div class="projects container mx-auto">
+                <div class="list">
+                    <!-- implement projects using json data -->
                     </div>
                 </div>
             </div>
@@ -401,13 +414,15 @@
                 document.getElementById('node_express').style.width = '60%';
                 document.getElementById('git').style.width = '80%';
                 document.getElementById('graphic').style.width = '50%';
+                document.getElementById('react').style.width = '30%';
             }
-
+            
             function skillNull() {
                 document.getElementById('html').style.width = '0%';
                 document.getElementById('css').style.width = '0%';
                 document.getElementById('js').style.width = '0%';
                 document.getElementById('graphic').style.width = '0%';
+                document.getElementById('react').style.width = '0%';
                 document.getElementById('node_express').style.width = '0%';
                 document.getElementById('git').style.width = '0%';
             }
@@ -422,6 +437,13 @@
                     'description': 'This is a full-stack educational website of basic mechanical engineering.',
                     'hrefLocation': 'https://basic-mechanical-engineering.herokuapp.com/',
                     'code': 'https://github.com/abhidadhaniya23/Mechanical-Website'
+                },
+                {
+                    'projectName': 'React Image Gallery',
+                    'img_src': 'assets/Sample-photos/image-gallery.png',
+                    'description': 'Image gallery UI',
+                    'hrefLocation': 'https://image-gallery-ui.netlify.app/',
+                    'code': 'https://github.com/abhidadhaniya23/abhidadhaniya.github.io/tree/master/RPS-Game'
                 },
                 {
                     'projectName': 'Rock, Paper, Scissor Game',
