@@ -9,20 +9,20 @@
 
     <div class="container mx-auto flex flex-col sm:flex-row justify-center items-center sm:items-baseline">
       <div class="flex flex-row flex-wrap justify-center items-center m-4 w-full overflow-hidden rounded-md">
-        <% articles.forEach(data=> { %>
+        <%# articles.forEach(data=> { %> <% for(let i=0;i<2;i++){ %>
         <div class="blog-img-hover bg-white overflow-hidden h-auto relative m-10 w-11/12 sm:w-full md:w-3/4 lg:w-5/12 rounded-lg pb-6 duration-300">
-          <a onclick="opacity()" href="/<%=data.title.replace(/\s/g, '-')%>">
-            <img class="post-img duration-200 hover:scale-105" src="<%=data.cover_image%>" alt="" />
+          <a onclick="opacity()" href="/<%=articles[i].title.replace(/\s/g, '-')%>">
+            <img class="post-img duration-200 hover:scale-105" src="<%=articles[i].cover_image%>" alt="" />
           </a>
-          <a onclick="opacity()" href="/<%=data.title.replace(/\s/g, '-')%>">
-            <h2 class="post-title pb-3 pt-5 px-4 text-gray-700 sm:text-2xl text-xl z-20"><%=data.title%></h2>
+          <a onclick="opacity()" href="/<%=articles[i].title.replace(/\s/g, '-')%>">
+            <h2 class="post-title pb-3 pt-5 px-4 text-gray-700 sm:text-2xl text-xl z-20"><%=articles[i].title%></h2>
           </a>
           <p class="text-gray-700 text-sm sm:text-xl opacity-50 w-full pl-5">
             <i class="fa fa-clock mr-2"></i>
-            <%=data.reading_time_minutes%> min to read
+            <%=articles[i].reading_time_minutes%> min to read
           </p>
         </div>
-        <% }); %>
+        <% } %> <%# }); %>
       </div>
     </div>
   </div>
