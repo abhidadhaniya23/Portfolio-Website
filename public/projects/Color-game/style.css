@@ -9,6 +9,9 @@
 }
 #main {
 }
+.colors {
+  -webkit-tap-highlight-color: rgba(176, 159, 159, 0);
+}
 .content {
   background: rgb(0, 13, 32);
   padding: 4rem 0;
