@@ -1,97 +1,132 @@
-*{
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+  color: whitesmoke;
+  text-align: center;
+}
+#main {
+}
+.content {
+  background: rgb(0, 13, 32);
+  padding: 4rem 0;
+  min-height: 100vh;
+}
+h1 {
+  color: rgb(255, 0, 106);
+  font-size: 4rem;
+  margin: 0rem auto 3rem;
+  font-family: "Dancing Script", cursive;
+  font-weight: 800;
+}
+.colors {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.colors:active {
+  position: relative;
+  top: 4px;
+}
+#showTxt {
+  transition: all 0.3s ease;
+  margin: 15px auto;
+  font-size: 2.4rem;
+}
+.container {
+  user-select: none;
+  margin: 20px auto;
+}
+.colors {
+  padding: 5px 10px;
+  /* background: rgba(255, 255, 255, 0.082); */
+  background: rgb(255 255 255 / 4%);
+  font-size: 20px;
+  margin: 10px 5px;
+  display: inline-block;
+  border-radius: 3px;
+}
+.score {
+  background: #000b1b;
+  width: 20rem;
+  margin: 2rem auto;
+  border-radius: 0.6rem;
+}
+.score .your-score {
+  background: #000813;
+  padding: 0.5rem 0;
+}
+.score p {
+  font-size: 1.8rem;
+}
+.wrapper {
+  padding: 1rem 0 1.2rem;
+}
+.result,
+.result_score {
+  margin: 5px 0;
+  display: flex;
+  justify-content: center;
+}
+.result p,
+.result_score p {
+  position: relative;
+  float: left;
+  font-size: 1.4rem;
+  margin: 0 10px;
+}
+#win {
+  color: #06ff00;
+}
+#loss {
+  color: #da1212;
+}
+.result_score p {
+  margin: 10px 25px;
+}
+.notes {
+  background: #000b1b;
+  margin: 2rem auto;
+  max-width: 25rem;
+  letter-spacing: 0.7px;
+  border-radius: 0.6rem;
+}
+#NoticeHowToPlay {
+  background: #000813;
+  padding: 0.7rem 0;
+  font-size: 1.8rem;
+  color: #c6ff00;
+}
+.note12 {
+  padding: 2rem;
+}
+#highestScore {
+  font-size: 1.2rem;
+  color: rgb(0, 255, 255);
+}
+
+footer {
+  position: relative;
+  padding: 15px;
+  color: #b4e309;
+  background: #000813;
+}
+@media (max-width: 400px) {
+  * {
     margin: 0;
     padding: 0;
-    font-family: 'Raleway', sans-serif;
-    color: whitesmoke;
-    text-align: center;
-}
-#main{
-}
-.content{
-    min-height: 80vh;
+  }
+  h1 {
+    margin: 20px auto;
+    font-size: 2.4rem;
+  }
+  #showTxt {
+    font-size: 1.7rem;
+  }
+  .content {
     background: black;
     padding: 50px 0;
-}
-h1{
-    font-family: 'Dancing Script', cursive;
-    color: rgb(255, 0, 106);
-    font-size: 2.4rem;
-}
-.colors{
-    cursor: pointer;
-}
-#showTxt{
-    font-family: 'Exo 2', sans-serif;
-    margin: 15px auto;
-    font-size: 2.4rem;
-}
-.container{
-    margin: 20px auto;
-}
-.colors{
-    padding: 5px 10px;
-    /* background: rgba(255, 255, 255, 0.082); */
-    background: rgba(255, 255, 255, 0.048);
-    font-size: 20px;
-    margin: 10px 5px;
-    display: inline-block;
-    border-radius: 3px;
-}
-.score p{
-    font-size: 1.8rem;
-}
-.result,.result_score{
-    margin: 5px 0;
-    display: flex;
-    justify-content: center;
-}
-.result p,.result_score p{
-    position: relative;
-    float: left;
-    font-size: 1.4rem;
-    margin: 0 10px;
-}
-#win{
-    color: rgb(0, 175, 0);
-}
-#loss{
-    color: rgb(216, 27, 27);
-}
-.result_score p{
-    margin: 10px 25px;
-}
-.notes{
-    padding: 7px;
-    letter-spacing: 0.7px;
-}
-#highestScore{
-    font-size: 1.2rem;
-    color: rgb(0, 255, 255);
-}
-
-
-footer{
-    position: relative;
-    padding: 15px;
-    color: gold;
-    /* background: rgb(12, 12, 12); */
-    background: #101010;
-}
-@media (max-width:400px){
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    h1{
-        margin: 20px auto;
-        font-size: 2.4rem;
-    }
-    #showTxt{
-        font-size: 1.7rem;
-    }
-    .content{
-        background: black;
-        padding: 50px 0;
-        height: auto;
-    }
+    height: auto;
+  }
 }

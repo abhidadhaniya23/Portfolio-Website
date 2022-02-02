@@ -131,8 +131,8 @@
         <h2><i class="fa fa-user-circle" aria-hidden="true"></i>About Me</h2>
 
         <div class="about">
-            <div class="photo flex flex-col justify-center items-center">
-                <img class="lazy mb-4 mx-auto" data-src="assets/pic.jpeg">
+            <div class="flex flex-col items-center justify-center photo">
+                <img class="mx-auto mb-4 lazy" data-src="assets/pic.jpeg">
                 <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="AbhiDadhaniya07" data-color="#5F7FFF" data-emoji="🥤"  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
             </div>
             <div class="me">
@@ -167,19 +167,19 @@
     <%- include('../partials/blog.ejs') %>
     
     <section id="notion-resources" class="text-center bg-[#f3f4f6]">
-        <h2 class="mb-12 text-4xl mx-auto text-primary-primary_purple font-medium"><i class="fa fa-code"></i> Web Development Resources</h2>
-        <div class="flex items-center justify-center flex-col">
-            <img class="lazy mb-4 mx-auto w-11/12 md:w-9/12" data-src="assets/devresources.png">
-                <a href="https://web-dev-resources.notion.site/Web-Development-Resources-be1207bcc32e434481c1ce6e90756964" class="resources-btn mb-10" target="_blank">Get for free</a>
+        <h2 class="mx-auto mb-12 text-4xl font-medium text-primary-primary_purple"><i class="fa fa-code"></i> Web Development Resources</h2>
+        <div class="flex flex-col items-center justify-center">
+            <img class="w-11/12 mx-auto mb-4 lazy md:w-9/12" data-src="assets/devresources.png">
+                <a href="https://web-dev-resources.notion.site/Web-Development-Resources-be1207bcc32e434481c1ce6e90756964" class="mb-10 resources-btn" target="_blank">Get for free</a>
         </div>
     </section>
     
     <section id="forth">
-        <div class="content pt-28 pb-16">
+        <div class="pb-16 content pt-28">
             <div class="heading">
                 <h2 class="mb-9"><i class="fa fa-jsfiddle" aria-hidden="true"></i> Development</h2>
             </div>
-            <div class="projects container mx-auto">
+            <div class="container mx-auto projects">
                 <div class="list">
                     <!-- implement projects using json data -->
                     </div>
@@ -200,23 +200,23 @@
         <section id="contact-me">
             <h2><i class="fa fa-user" aria-hidden="true"></i> &nbsp;Contact Me</h2>
 
-            <div class="flex flex-col justify-center items-center mt-5 mb-8 w-full">
+            <div class="flex flex-col items-center justify-center w-full mt-5 mb-8">
 
-                <div class="contact-form flex flex-col justify-center md:w-5/12 lg:w-3/12 w-10/12">
+                <div class="flex flex-col justify-center w-10/12 contact-form md:w-5/12 lg:w-3/12">
                     <form action="/" method="post" id="contactForm" autocomplete="off">
-                        <div class="flex flex-row justify-center items-center">
+                        <div class="flex flex-row items-center justify-center">
                             <input type="text" autocomplete="off"
-                                class="w-full bg-primary-dark_blue border-2 border-solid border-transparent focus:border-primary-primary_purple duration-200 my-2 rounded text-base outline-none text-indigo-200 py-3 px-3 leading-8"
+                                class="w-full px-3 py-3 my-2 text-base leading-8 text-indigo-200 duration-200 border-2 border-transparent border-solid rounded outline-none bg-primary-dark_blue focus:border-primary-primary_purple"
                                 name="name" id="name" required placeholder="Name">
                         </div>
-                        <div class="flex flex-row justify-center items-center">
+                        <div class="flex flex-row items-center justify-center">
                             <input type="email" autocomplete="off"
-                                class="w-full bg-primary-dark_blue border-2 border-solid border-transparent focus:border-primary-primary_purple duration-200 my-2 rounded text-base outline-none text-indigo-200 py-3 px-3 leading-8"
+                                class="w-full px-3 py-3 my-2 text-base leading-8 text-indigo-200 duration-200 border-2 border-transparent border-solid rounded outline-none bg-primary-dark_blue focus:border-primary-primary_purple"
                                 name="email" id="email" required placeholder="Email">
                         </div>
-                        <div class="flex flex-row justify-center items-center">
+                        <div class="flex flex-row items-center justify-center">
                             <textarea
-                                class="w-full bg-primary-dark_blue border-2 border-solid border-transparent focus:border-primary-primary_purple duration-200 my-2 rounded text-base outline-none text-indigo-200 py-3 px-3 leading-8"
+                                class="w-full px-3 py-3 my-2 text-base leading-8 text-indigo-200 duration-200 border-2 border-transparent border-solid rounded outline-none bg-primary-dark_blue focus:border-primary-primary_purple"
                                 name="message" id="msg" autocomplete="off" required placeholder="Message"></textarea>
                         </div>
                         <button type="submit" onclick="validate()" id="submit"
@@ -459,6 +459,13 @@
                 //     'hrefLocation': 'https://awesome-cheat-sheets.online/',
                 //     'code': 'https://github.com/Youth-Avenue-2021/cheat-sheet.github.io'
                 // },
+                {
+                    'projectName': 'Mind Sharp Game',
+                    'img_src': 'assets/Sample-photos/color_game.jpg',
+                    'description': 'This is a full-stack educational website of basic mechanical engineering.',
+                    'hrefLocation': 'Color-game/color-game.html',
+                    'code': 'https://github.com/abhidadhaniya23/Mechanical-Website'
+                },
                 {
                     'projectName': 'Countdown-Timer',
                     'img_src': 'assets/Sample-photos/countdown-timer.jpg',
