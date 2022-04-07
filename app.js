@@ -2,10 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const axios = require("axios");
-const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const blogs = require("./routes/blog");
-const fs = require("fs");
 
 // set port number or
 const port = process.env.PORT || 3000;
@@ -14,9 +12,13 @@ const port = process.env.PORT || 3000;
 app.set("view engine", "ejs");
 
 // middleware
+//response as Json
+app.use(express.json());
+
+//Parse x-www-form-urlencoded request into req.body
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(express.static("public/projects"));
-app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/", blogs);
 
 // mail-sender
@@ -68,14 +70,14 @@ app.post("/contact", (req, res) => {
         from: `${req.body.email}`,
         to: "abhidadhaniya23@gmail.com",
         subject: `Email by ${req.body.name}`,
-        html: `Name : ${req.body.name} <br> Email : ${req.body.email} <br> ${req.body.subject} <br> Message : ${req.body.message}`,
+        html: `Name : ${req.body.name} <br> Email : ${req.body.email} <br> Subject : ${req.body.subject} <br> Message : ${req.body.msg}`,
     };
     transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
             console.log(error);
         } else {
             // console.log('Email sent: ' + info.response);
-            res.status(200).json({ msg: "Response recorded" });
+            res.status(200).json({ name: req.body.name, email: req.body.email, subject: req.body.subject, msg: req.body.msg });
         }
     });
 });
