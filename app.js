@@ -62,6 +62,24 @@ app.post("/", (req, res) => {
     });
 });
 
+app.post("/contact", (req, res) => {
+    // console.log(`Name : ${req.body.name} <br> Email : ${req.body.email} <br> Message : ${req.body.message}`);
+    const mailOptions = {
+        from: `${req.body.email}`,
+        to: "abhidadhaniya23@gmail.com",
+        subject: `Email by ${req.body.name}`,
+        html: `Name : ${req.body.name} <br> Email : ${req.body.email} <br> ${req.body.subject} <br> Message : ${req.body.message}`,
+    };
+    transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            console.log(error);
+        } else {
+            // console.log('Email sent: ' + info.response);
+            res.status(200).json({ msg: "Response recorded" });
+        }
+    });
+});
+
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
 });
